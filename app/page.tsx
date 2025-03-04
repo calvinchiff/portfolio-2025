@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Tile from "./components/Tile";
 import Grid from "./components/Grid";
+import { translations } from "@/public/translations";
 
 export default function Home() {
 	return (
@@ -10,14 +11,10 @@ export default function Home() {
 			<p>test</p>
 			<main>
 				<Grid>
-					<Tile
-						// className="col-span-2"
-						children="test"
-						colSpan={2}
-						rowSpan="2"
-						bg="bg-gray-100"
-					/>
-					<Tile children="test2" colSpan={1} />
+					<Tile customClassName="bg-gray-100">tests</Tile>
+					<Tile>{translations.en.general.tiles[0]}</Tile>
+					{/* <Tile>{translations.en.general.tiles[1]}</Tile> */}
+					{/* <Tile>{translations.en.general.tiles[2]}</Tile> */}
 				</Grid>
 			</main>
 			{/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"> */}
