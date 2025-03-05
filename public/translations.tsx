@@ -5,7 +5,7 @@ export const translations = {
 			{ id: "2", title: "Skills", link: "#skills" },
 			{ id: "3", title: "Career", link: "#career" },
 			{ id: "4", title: "Projects", link: "#projects" },
-			{ id: "5", title: "Contacts", link: "#contacts" }
+			{ id: "5", title: "Contact", link: "#contact" }
 		],
 		general: {
 			name: "Calvin CHIFFOT",
@@ -16,7 +16,11 @@ export const translations = {
 				"Eager to learn - currently exploring embedded with STM32 and learning about edge AI/Computing",
 				"Creative mind, I like to 3D model stuff to create later with 3D printing + embedded or just to plan wood working."
 			],
-			tiles: ["Skills", "Career", "Projects"]
+			tiles: [
+				{ id: "Skills", imageLink: "" },
+				{ id: "Career", imageLink: "" },
+				{ id: "Projects", imageLink: "" }
+			]
 		},
 		skills: {
 			technicalSkills: {
@@ -99,11 +103,11 @@ export const translations = {
 				state: ""
 			}
 		],
-		contacts: {
+		contact: {
 			text1: "Lets keep in touch !",
 			text2:
 				"You can send me an email clicking here or send it to calvinchiffot@protonmail.com",
-			linkedinLink: "linkdein.com",
+			linkedinLink: "linkedin.com",
 			githubLink: "github.com"
 		}
 	},
