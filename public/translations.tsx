@@ -52,6 +52,59 @@ export const translations = {
 					{ id: "6", title: "JavaScript", desc: "blablabla", icon: "" }
 				]
 			}
+		},
+		career: [
+			{
+				id: "1",
+				title: "Technical Consultant Dev",
+				company: "LTTD Consulting",
+				description: "",
+				school: "",
+				location: "Saint-Herblain, France",
+				from: "02-05-2025",
+				to: "10-10-2024",
+				techno: "",
+				success: ""
+			},
+			{
+				id: "2",
+				title: "Technical Consultant Dev",
+				company: "LTTD Consulting",
+				description: "",
+				school: "",
+				location: "Saint-Herblain, France",
+				from: "02-05-2025",
+				to: "10-10-2024",
+				techno: "",
+				success: ""
+			}
+		],
+		projects: [
+			{
+				id: "1",
+				title: "Technical Consultant Dev",
+				description: "",
+				link: "Saint-Herblain, France",
+				date: "02-05-2025",
+				techno: "",
+				state: ""
+			},
+			{
+				id: "2",
+				title: "Technical Consultant Dev",
+				description: "",
+				link: "Saint-Herblain, France",
+				date: "02-05-2025",
+				techno: "",
+				state: ""
+			}
+		],
+		contacts: {
+			text1: "Lets keep in touch !",
+			text2:
+				"You can send me an email clicking here or send it to calvinchiffot@protonmail.com",
+			linkedinLink: "linkdein.com",
+			githubLink: "github.com"
 		}
 	},
 	fr: {
