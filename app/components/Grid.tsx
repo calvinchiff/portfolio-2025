@@ -1,8 +1,11 @@
 import React from "react";
 
-export default function Grid({ children }) {
+export default function Grid({ id = "", children }) {
 	return (
-		<div className="grid grid-cols-3 grid-rows-2 gap-4 bg-amber-500 w-full max-w-screen-md mx-auto">
+		<div
+			id={id}
+			className="h-screen grid grid-cols-3 grid-rows-2 auto-rows-[20fr] gap-2 bg-amber-500 min-h-[400px] max-w-screen-md mx-auto "
+		>
 			{children}
 		</div>
 	);
