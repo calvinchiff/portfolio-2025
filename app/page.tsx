@@ -12,13 +12,13 @@ import CareerGrid from "./components/grids/CareerGrid";
 export default function Home() {
 	//navbar
 	const listNavbar = translations.en.navbar.map((x) => (
-		<Link key={x.id} href={x.link} className="cursor-pointer hover:underline">
+		<a key={x.id} href={x.link} className="cursor-pointer hover:underline">
 			{x.title}
-		</Link>
+		</a>
 	));
 
 	return (
-		<div className="font-[family-name:var(--font-exo)] text-white scroll-smooth">
+		<div className="font-[family-name:var(--font-exo)] text-white overflow-y-scroll ">
 			{/* Navbar */}
 			<header className="fixed top-0 left-0 w-full shadow-md p-4 backdrop-blur-sm flex justify-center z-50">
 				<div className="absolute top-0 left-0 w-full h-full bg-[#2B2B2B] -z-10 opacity-70"></div>
