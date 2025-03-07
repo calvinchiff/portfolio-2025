@@ -13,83 +13,101 @@ export default function Home() {
 	));
 
 	return (
-		<div className="font-[family-name:var(--font-exo)] scroll-smooth">
-			<header className="fixed top-0 left-0 w-full bg-white shadow-md p-4 flex justify-center z-50">
-				<ul className="flex gap-6">{listNavbar}</ul>
+		<div className="font-[family-name:var(--font-exo)] text-white scroll-smooth">
+			{/* Navbar */}
+			<header className="fixed top-0 left-0 w-full shadow-md p-4 backdrop-blur-sm flex justify-center z-50">
+				<div className="absolute top-0 left-0 w-full h-full bg-[#2B2B2B] -z-10 opacity-70"></div>
+				<ul className="relative flex gap-6">{listNavbar}</ul>
 			</header>
-			<main className="pt-200 gap-4 ">
-				<div className="gap-4 snap-y snap-mandatory">
-					<Grid id="general">
-						<Tile customClassName="col-span-3">tests</Tile>
-						<Tile>{translations.en.general.tiles[0].id}</Tile>
-						<Tile>{translations.en.general.tiles[1].id}</Tile>
-						<Tile>{translations.en.general.tiles[2].id}</Tile>
-					</Grid>
 
-					<Grid id="skills">
-						<Tile
-							customClassName="col-span-2 row-span-2"
-							title={translations.en.skills.technicalSkills.title}
-						>
-							test
-						</Tile>
-						<Tile title={translations.en.skills.otherSkills.title}>test</Tile>
-						<Tile title={translations.en.skills.bonusSkills.title}>test</Tile>
-					</Grid>
+			<div className="fixed top-0 left-0 w-full h-full min-h-full -z-10">
+				<Image
+					src="/background.png"
+					alt="Background Image"
+					width={10000}
+					height={10000}
+					quality={100}
+					objectPosition="center"
+					priority
+				/>
+			</div>
 
-					<Grid id="career">
-						<Tile title="Timeline" customClassName="row-span-2">
-							test
-						</Tile>
-						<Tile title="Details" customClassName="col-span-2 row-span-2">
-							test
-						</Tile>
-					</Grid>
-					<Grid customClassName="grid-rows-10 grid-cols-4" id="projects">
-						<Tile
-							title={translations.en.projects[0].title}
-							customClassName="col-span-full row-span-9"
-						>
-							Projet test
-						</Tile>
-						<Tile title="Dev" customClassName="col-span-2">
-							Dev
-						</Tile>
-						<Tile title="Craft" customClassName="col-span-2">
-							Craft
-						</Tile>
-					</Grid>
-					<Grid id="contact">
-						<Tile customClassName="col-span-3 cursor-pointer">
+			<main className="flex flex-col pt-20 gap-2">
+				{/* General section */}
+				<Grid id="general">
+					<Tile customClassName="col-span-3">tests</Tile>
+					<Tile>{translations.en.general.tiles[0].id}</Tile>
+					<Tile>{translations.en.general.tiles[1].id}</Tile>
+					<Tile>{translations.en.general.tiles[2].id}</Tile>
+				</Grid>
+
+				{/* Skills section */}
+				<Grid id="skills">
+					<Tile
+						customClassName="col-span-2 row-span-2"
+						title={translations.en.skills.technicalSkills.title}
+					>
+						test
+					</Tile>
+					<Tile title={translations.en.skills.otherSkills.title}>test</Tile>
+					<Tile title={translations.en.skills.bonusSkills.title}>test</Tile>
+				</Grid>
+
+				{/* Career section */}
+				<Grid id="career">
+					<Tile title="Timeline" customClassName="row-span-2">
+						test
+					</Tile>
+					<Tile title="Details" customClassName="col-span-2 row-span-2">
+						test
+					</Tile>
+				</Grid>
+
+				{/* Project section */}
+				<Grid customClassName="grid-rows-10 grid-cols-4" id="projects">
+					<Tile
+						title={translations.en.projects[0].title}
+						customClassName="col-span-full row-span-9"
+					>
+						Projet test
+					</Tile>
+					<Tile title="Dev" customClassName="col-span-2"></Tile>
+					<Tile title="Craft" customClassName="col-span-2"></Tile>
+				</Grid>
+
+				{/* Contact section */}
+				<Grid id="contact">
+					<Tile customClassName="col-span-3 cursor-pointer">
+						<div className="text-center align-middle">
 							<p>{translations.en.contact.text1}</p>
 							<p>{translations.en.contact.text2}</p>
-						</Tile>
-						<Tile customClassName="cursor-pointer">
-							<Image
-								src="/linkedin-logo.png"
-								height={160}
-								width={160}
-								alt="Logo of Linkedin"
-							/>
-						</Tile>
-						<Tile customClassName="cursor-pointer">
-							<Image
-								src="/github-logo.png"
-								height={160}
-								width={160}
-								alt="Logo of Linkedin"
-							/>
-						</Tile>
-						<Tile customClassName="cursor-pointer">
-							<Image
-								src="/linkedin-logo.png"
-								height={160}
-								width={160}
-								alt="Logo of Linkedin"
-							/>
-						</Tile>
-					</Grid>
-				</div>
+						</div>
+					</Tile>
+					<Tile customClassName="cursor-pointer">
+						<Image
+							src="/linkedin-logo.png"
+							height={160}
+							width={160}
+							alt="Logo of Linkedin"
+						/>
+					</Tile>
+					<Tile customClassName="cursor-pointer">
+						<Image
+							src="/github-logo.png"
+							height={160}
+							width={160}
+							alt="Logo of Linkedin"
+						/>
+					</Tile>
+					<Tile customClassName="cursor-pointer">
+						<Image
+							src="/linkedin-logo.png"
+							height={160}
+							width={160}
+							alt="Logo of Linkedin"
+						/>
+					</Tile>
+				</Grid>
 			</main>
 			<footer>
 				<a
