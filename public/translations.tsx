@@ -1,11 +1,11 @@
 export const translations = {
 	en: {
 		navbar: [
-			{ id: "1", title: "General", link: "#general" },
-			{ id: "2", title: "Skills", link: "#skills" },
-			{ id: "3", title: "Career", link: "#career" },
-			{ id: "4", title: "Projects", link: "#projects" },
-			{ id: "5", title: "Contact", link: "#contact" }
+			{ id: "general", title: "General" },
+			{ id: "skills", title: "Skills" },
+			{ id: "career", title: "Career" },
+			{ id: "projects", title: "Projects" },
+			{ id: "contact", title: "Contact" }
 		],
 		general: {
 			name: "Calvin CHIFFOT",
