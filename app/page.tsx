@@ -27,8 +27,8 @@ export default function Home() {
 				/>
 			</div>
 
-			<main className="flex flex-col gap-2">
-				<div className="h-[10vh]"></div>
+			<main className="flex flex-col gap-2 h-60vh">
+				<div className="h-[20vh]"></div>
 				<GeneralGrid />
 
 				<SkillsGrid />
@@ -38,11 +38,11 @@ export default function Home() {
 				<ProjectsGrid />
 
 				<ContactGrid />
-				<div className="h-[10vh]"></div>
+				<div className="h-[20vh]"></div>
 			</main>
 			<footer>
 				<a
-					className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+					className="fixed bottom-0 left-0 flex items-center gap-2 hover:underline hover:underline-offset-4"
 					href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
 					target="_blank"
 					rel="noopener noreferrer"

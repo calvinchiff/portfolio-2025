@@ -4,7 +4,7 @@ import React from "react";
 import Tile from "./ui/Tile";
 
 export default function Header() {
-	function handleScrollToId(id) {
+	function handleScrollToId(id: string) {
 		const element = document.getElementById(id);
 		if (element) {
 			element.scrollIntoView({
@@ -25,7 +25,7 @@ export default function Header() {
 	));
 
 	return (
-		<header className="flex items-center justify-center sticky w-full top-10 left-0 z-50">
+		<header className="fixed flex items-center justify-center w-full top-10 left-0 z-50">
 			<nav className="inline-flex backdrop-blur-sm rounded-[35px]">
 				<Tile>
 					<ul className="relative flex mx-2 gap-5">{listNavbar}</ul>
