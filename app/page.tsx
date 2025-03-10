@@ -27,18 +27,25 @@ export default function Home() {
 				/>
 			</div>
 
-			<main className="flex flex-col gap-2 h-60vh">
-				<div className="h-[20vh]"></div>
-				<GeneralGrid />
+			<main className="flex flex-col gap-2 h-[100dvh] overflow-y-auto snap-y snap-mandatory transition duration-150">
+				<section className="min-h-[20vh]"></section>
+				<section className="snap-center">
+					<GeneralGrid />
+				</section>
+				<section className="snap-center">
+					<SkillsGrid />
+				</section>
+				<section className="snap-center">
+					<CareerGrid />
+				</section>
+				<section className="snap-center">
+					<ProjectsGrid />
+				</section>
+				<section className="snap-center">
+					<ContactGrid />
+				</section>
 
-				<SkillsGrid />
-
-				<CareerGrid />
-
-				<ProjectsGrid />
-
-				<ContactGrid />
-				<div className="h-[20vh]"></div>
+				<div className="min-h-[20vh]"></div>
 			</main>
 			<footer>
 				<a
