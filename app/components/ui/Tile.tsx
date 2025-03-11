@@ -3,7 +3,7 @@ import React from "react";
 export default function Tile({ title = "", children, customClassName = "" }) {
 	return (
 		<div
-			className={`relative rounded-[35px] backdrop-blur-sm p-3 w-full h-full ${customClassName}`}
+			className={`relative rounded-[35px] backdrop-blur-sm p-4 w-full h-full ${customClassName}`}
 		>
 			{/* Background layer */}
 			<div className="absolute rounded-[35px] inset-0 bg-[#2B2B2B] opacity-70 "></div>

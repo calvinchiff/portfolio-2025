@@ -30,7 +30,7 @@ export default function Header() {
 		<header className="fixed flex items-center justify-center w-full top-10 left-0 z-50">
 			<nav className="inline-flex backdrop-blur-sm rounded-[35px]">
 				<Tile>
-					<ul className="relative flex mx-3 gap-5">{listNavbar}</ul>
+					<ul className="relative flex mx-3 gap-5 text-xl">{listNavbar}</ul>
 				</Tile>
 			</nav>
 			<button className="absolute right-10 h-12 w-12 overflow-hidden rounded-[35px]">

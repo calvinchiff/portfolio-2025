@@ -12,7 +12,7 @@ import Header from "./components/Header";
 
 export default function Home() {
 	return (
-		<div className="font-[family-name:var(--font-exo)] text-white ">
+		<main className="font-[family-name:var(--font-exo)] text-white flex flex-col gap-2 h-[100dvh] snap-y snap-mandatory transition duration-150 overflow-y-scroll z-0 scrollbar scrollbar-thumb-[#F7AB0A]/80 scrollbar-track-gray-400/20 scroll-smooth">
 			<Header />
 
 			<div className="fixed top-0 left-0 w-full h-full min-h-full -z-10">
@@ -26,27 +26,24 @@ export default function Home() {
 					priority
 				/>
 			</div>
+			<section className="min-h-[40vh]"></section>
+			<section className="snap-center">
+				<GeneralGrid />
+			</section>
+			<section className="snap-center">
+				<SkillsGrid />
+			</section>
+			<section className="snap-center">
+				<CareerGrid />
+			</section>
+			<section className="snap-center">
+				<ProjectsGrid />
+			</section>
+			<section className="snap-center">
+				<ContactGrid />
+			</section>
 
-			<main className="flex flex-col gap-2 h-[100dvh] overflow-y-auto snap-y snap-mandatory transition duration-150">
-				<section className="min-h-[20vh]"></section>
-				<section className="snap-center">
-					<GeneralGrid />
-				</section>
-				<section className="snap-center">
-					<SkillsGrid />
-				</section>
-				<section className="snap-center">
-					<CareerGrid />
-				</section>
-				<section className="snap-center">
-					<ProjectsGrid />
-				</section>
-				<section className="snap-center">
-					<ContactGrid />
-				</section>
-
-				<div className="min-h-[20vh]"></div>
-			</main>
+			<div className="min-h-[40vh]"></div>
 			<footer>
 				<a
 					className="fixed bottom-0 left-0 flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -57,6 +54,6 @@ export default function Home() {
 					Learn
 				</a>
 			</footer>
-		</div>
+		</main>
 	);
 }
