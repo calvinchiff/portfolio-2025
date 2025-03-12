@@ -27,22 +27,11 @@ export default function Home() {
 				/>
 			</div>
 			<section className="min-h-[40vh]"></section>
-			<section className="snap-center">
-				<GeneralGrid />
-			</section>
-			<section className="snap-center">
-				<SkillsGrid />
-			</section>
-			<section className="snap-center">
-				<CareerGrid />
-			</section>
-			<section className="snap-center">
-				<ProjectsGrid />
-			</section>
-			<section className="snap-center">
-				<ContactGrid />
-			</section>
-
+			<GeneralGrid />
+			<SkillsGrid />
+			<CareerGrid />
+			<ProjectsGrid />
+			<ContactGrid />
 			<div className="min-h-[40vh]"></div>
 			<footer>
 				<a
