@@ -3,11 +3,11 @@ import Tile from "@/app/components/ui/Tile";
 import Grid from "@/app/components/ui/Grid";
 import { translations } from "@/public/translations";
 import Link from "next/link";
-import GeneralGrid from "./components/grids/GeneralGrid";
-import SkillsGrid from "./components/grids/SkillsGrid";
-import ContactGrid from "./components/grids/ContactGrid";
-import ProjectsGrid from "./components/grids/ProjectsGrid";
-import CareerGrid from "./components/grids/CareerGrid";
+import GeneralGrid from "./components/grids/GeneralSection";
+import SkillsGrid from "./components/grids/SkillsSection";
+import ContactGrid from "./components/grids/ContactSection";
+import ProjectsGrid from "./components/grids/ProjectsSection";
+import CareerGrid from "./components/grids/CareerSection";
 import Header from "./components/Header";
 
 export default function Home() {

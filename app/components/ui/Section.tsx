@@ -1,6 +1,8 @@
 import React from "react";
 
 type SectionProps = {
+	customGridClassName: string;
+	id: string;
 	children: React.ReactNode;
 	isCentered: boolean;
 	nbLeftGridRows?: 0 | 1 | 2;
@@ -38,18 +40,26 @@ const renderInvisGrid = (position: "left" | "right", nbGridRows = 0) => {
 };
 
 export default function Section({
+	customGridClassName,
+	id,
 	children,
 	isCentered = true,
 	nbLeftGridRows = 0,
 	nbRightGridRows = 0
 }: SectionProps) {
 	return (
-		<section className="snap-center">
+		<section id={id} className="snap-center">
 			<div className="overflow-hidden flex flex-nowrap justify-center items-center w-full h-[65vh] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] gap-2">
+				{/* Left invis grid */}
 				{renderInvisGrid("left", nbLeftGridRows)}
-				<div className={`h-full ${isCentered ? "" : InvisGridStyle}`}>
+				<div
+					className={`grid grid-cols-3 grid-rows-2 gap-2 h-full aspect-[2/3] sm:aspect-[3/2] ${customGridClassName} ${
+						isCentered ? "" : InvisTileStyle + "mask-bottom"
+					}`}
+				>
 					{children}
 				</div>
+				{/* Right invis grid */}
 				{renderInvisGrid("right", nbRightGridRows)}
 			</div>
 		</section>
