@@ -26,7 +26,7 @@ export default function Home() {
 					priority
 				/>
 			</div>
-			<section className="min-h-[40vh]"></section>
+			<div className="min-h-[40vh]"></div>
 			<GeneralGrid />
 			<SkillsGrid />
 			<CareerGrid />

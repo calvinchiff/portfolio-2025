@@ -4,10 +4,11 @@ type SectionProps = {
 	customGridClassName: string;
 	id: string;
 	children: React.ReactNode;
-	isCentered: boolean;
 	nbLeftGridRows?: 0 | 1 | 2;
 	nbRightGridRows?: 0 | 1 | 2;
 };
+
+const isCentered = true;
 
 const InvisGridStyle = "blur-[1px]";
 const InvisTileStyle =
@@ -43,7 +44,6 @@ export default function Section({
 	customGridClassName,
 	id,
 	children,
-	isCentered = true,
 	nbLeftGridRows = 0,
 	nbRightGridRows = 0
 }: SectionProps) {
