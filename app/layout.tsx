@@ -8,7 +8,7 @@ const exo = Exo({
 });
 
 export const metadata: Metadata = {
-	title: "Portfolio Calvin CHIFFOT",
+	title: "Calvin CHIFFOT's Portfolio",
 	description:
 		"Portfolio Calvin CHIFFOT Full-Stack NodeJS JavaScript TypeScript Dev"
 };
