@@ -3,13 +3,15 @@ import Image from "next/image";
 import Tile from "@/app/components/ui/Tile";
 import Section from "@/app/components/ui/Section";
 import { translations } from "@/public/translations";
+import { useLanguage } from "@/app/components/lib/LanguageContext";
 
 export default function ProjectsGrid() {
+	const { language } = useLanguage();
 	return (
 		<Section customClassName="grid-rows-20 grid-cols-4" id="projects">
 			<Tile
-				title={translations.en.projects[0].title}
-				customClassName="col-span-full row-span-17"
+				title={translations[language].projects[0].title}
+				customClassName="col-span-4 row-span-17"
 			>
 				Projet test
 			</Tile>

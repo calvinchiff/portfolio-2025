@@ -3,8 +3,11 @@ import Image from "next/image";
 import Tile from "@/app/components/ui/Tile";
 import Section from "@/app/components/ui/Section";
 import { translations } from "@/public/translations";
+import { useLanguage } from "@/app/components/lib/LanguageContext";
 
 export default function ContactGrid() {
+	const { language } = useLanguage();
+
 	return (
 		<Section
 			id="contact"
@@ -14,8 +17,8 @@ export default function ContactGrid() {
 		>
 			<Tile customClassName="col-span-4 sm:col-span-3 row-span-2 sm:row-span-1 cursor-pointer">
 				<div className="h-full gap-4 flex flex-col text-center items-center justify-center">
-					<p>{translations.en.contact.text1}</p>
-					<p>{translations.en.contact.text2}</p>
+					<p>{translations[language].contact.text1}</p>
+					<p>{translations[language].contact.text2}</p>
 				</div>
 			</Tile>
 			<Tile customClassName="col-span-2 sm:col-span-1 cursor-pointer">

@@ -3,10 +3,12 @@
 import Image from "next/image";
 import { translations } from "@/public/translations";
 import React, { useEffect, useState } from "react";
-import Tile from "./ui/Tile";
+import Tile from "@/app/components/ui/Tile";
+import { useLanguage } from "@/app/components/lib/LanguageContext";
 
 export default function Header() {
 	const [activeSection, setActiveSection] = useState<string | null>(null);
+	const { language, changeLanguage } = useLanguage();
 
 	function handleScrollToId(id: string) {
 		const element = document.getElementById(id);
@@ -46,7 +48,7 @@ export default function Header() {
 		};
 	}, []);
 
-	const listNavbar = translations.en.navbar.map((x) => (
+	const listNavbar = translations[language].navbar.map((x) => (
 		<button
 			onClick={() => handleScrollToId(x.id)}
 			key={x.id}
@@ -67,13 +69,15 @@ export default function Header() {
 					<ul className="relative flex mx-3 gap-5 text-xl">{listNavbar}</ul>
 				</Tile>
 			</nav>
-			<button className="absolute right-10 h-12 w-12 overflow-hidden rounded-[35px]">
+			<button
+				onClick={() => changeLanguage(language === "en" ? "fr" : "en")}
+				className="absolute right-10 h-12 w-12 overflow-hidden rounded-full"
+			>
 				<Image
-					src="/Flag_UK.png"
-					height={80}
-					width={80}
-					alt="Logo of Linkedin"
-					objectFit="cover"
+					src={language === "en" ? "/Flag_UK_1.png" : "/Flag_FR_1.png"}
+					fill={true}
+					alt="Language Toggle between EN/FR"
+					objectFit="contain"
 				/>
 			</button>
 		</header>
