@@ -22,7 +22,7 @@ const renderInvisGrid = (position: "left" | "right", nbGridRows = 0) => {
 	const gridRowsSize = nbGridRows === 1 ? "grid-row-1" : "grid-row-2";
 	return (
 		<div
-			className={`grid ${gridRowsSize} gap-2 h-full min-w-[200px] lg:min-w-[300px] ${InvisGridStyle}`}
+			className={`grid ${gridRowsSize} gap-2 h-full min-w-[200px] md:min-w-[300px] ${InvisGridStyle}`}
 		>
 			{nbGridRows >= 1 && (
 				<div
@@ -49,11 +49,11 @@ export default function Section({
 }: SectionProps) {
 	return (
 		<section id={id} className="snap-center">
-			<div className="overflow-hidden flex flex-nowrap justify-center items-center w-full h-[65vh] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] gap-2">
+			<div className="overflow-hidden flex flex-nowrap justify-center items-center w-full h-[65vh] gap-2">
 				{/* Left invis grid */}
 				{renderInvisGrid("left", nbLeftGridRows)}
 				<div
-					className={`grid grid-cols-3 grid-rows-2 gap-2 h-full aspect-[2/3] sm:aspect-[3/2] ${customGridClassName} ${
+					className={`grid grid-cols-3 grid-rows-2 gap-2 h-full md:max-w-[90vw] aspect-[2/3] md:aspect-[3/2] ${customGridClassName} ${
 						isCentered ? "" : InvisTileStyle + "mask-bottom"
 					}`}
 				>

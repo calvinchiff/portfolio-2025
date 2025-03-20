@@ -11,17 +11,17 @@ export default function ContactGrid() {
 	return (
 		<Section
 			id="contact"
-			customClassName={"grid-rows-4 grid-cols-4 sm:grid-rows-2 sm:grid-cols-3"}
+			customClassName={"grid-rows-4 grid-cols-4 md:grid-rows-2 md:grid-cols-3"}
 			nbLeftGridRows={2}
 			nbRightGridRows={2}
 		>
-			<Tile customClassName="col-span-4 sm:col-span-3 row-span-2 sm:row-span-1 cursor-pointer">
+			<Tile customClassName="col-span-4 md:col-span-3 row-span-2 md:row-span-1 cursor-pointer">
 				<div className="h-full gap-4 flex flex-col text-center items-center justify-center">
 					<p>{translations[language].contact.text1}</p>
 					<p>{translations[language].contact.text2}</p>
 				</div>
 			</Tile>
-			<Tile customClassName="col-span-2 sm:col-span-1 cursor-pointer">
+			<Tile customClassName="col-span-2 md:col-span-1 cursor-pointer">
 				<div className="h-full w-full flex items-center justify-center">
 					<Image
 						src="/linkedin-logo.png"
@@ -31,7 +31,7 @@ export default function ContactGrid() {
 					/>
 				</div>
 			</Tile>
-			<Tile customClassName="col-span-2 sm:col-span-1 cursor-pointer">
+			<Tile customClassName="col-span-2 md:col-span-1 cursor-pointer">
 				<div className="h-full w-full flex items-center justify-center">
 					<Image
 						src="/github-logo.png"
@@ -41,7 +41,7 @@ export default function ContactGrid() {
 					/>
 				</div>
 			</Tile>
-			<Tile customClassName="col-span-4 sm:col-span-1 cursor-pointer">
+			<Tile customClassName="col-span-4 md:col-span-1 cursor-pointer">
 				<div className="h-full w-full flex items-center justify-center">
 					<Image
 						src="/linkedin-logo.png"
