@@ -73,7 +73,7 @@ export default function Header() {
 			</nav>
 			<button
 				onClick={() => changeLanguage(language === "en" ? "fr" : "en")}
-				className="fixed top-10 right-[10dvw] h-10 md:h-15 w-10 md:w-15 overflow-hidden rounded-full cursor-pointer shadow-xl hover:shadow-white hover:shadow-xs"
+				className="fixed top-10 md:top-[4dvh] right-[10dvw] h-10 md:h-15 w-10 md:w-15 overflow-hidden rounded-full cursor-pointer shadow-xl hover:shadow-white hover:shadow-xs"
 			>
 				<Image
 					src={language === "en" ? "/Flag_UK_1.png" : "/Flag_FR_1.png"}
