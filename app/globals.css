@@ -74,4 +74,13 @@ body {
 	.text-glow {
 		text-shadow: 0px 0px 15px rgba(252, 255, 210, 0.8);
 	}
+
+	.scrollbar-none::-webkit-scrollbar {
+		display: none;
+	}
+
+	.scrollbar-none {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
 }
