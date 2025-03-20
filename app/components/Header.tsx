@@ -5,6 +5,7 @@ import { translations } from "@/public/translations";
 import React, { useEffect, useState } from "react";
 import Tile from "@/app/components/ui/Tile";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
+import BG from "@/app/components/ui/BG";
 
 export default function Header() {
 	const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -63,15 +64,16 @@ export default function Header() {
 	));
 
 	return (
-		<header className="fixed flex items-center justify-center w-full top-10 left-0 z-50">
-			<nav className="inline-flex backdrop-blur-sm rounded-[35px] shadow-xl">
-				<Tile>
-					<ul className="relative flex mx-3 gap-5 text-xl">{listNavbar}</ul>
-				</Tile>
+		<header className="fixed flex items-center justify-center w-full bottom-5 md:bottom-auto md:top-[4dvh] left-0 z-50">
+			<nav className="inline-flex max-w-[98vw] backdrop-blur-sm rounded-[35px] shadow-xl p-3.5 md:p-4">
+				<BG />
+				<ul className="relative flex mx-auto md:mx-3 gap-1.5 md:gap-4 text-base md:text-lg xl:text-2xl">
+					{listNavbar}
+				</ul>
 			</nav>
 			<button
 				onClick={() => changeLanguage(language === "en" ? "fr" : "en")}
-				className="absolute right-10 h-12 w-12 overflow-hidden rounded-full"
+				className="fixed top-10 right-[10dvw] h-10 md:h-15 w-10 md:w-15 overflow-hidden rounded-full cursor-pointer shadow-xl hover:shadow-white hover:shadow-xs"
 			>
 				<Image
 					src={language === "en" ? "/Flag_UK_1.png" : "/Flag_FR_1.png"}

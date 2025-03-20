@@ -16,7 +16,7 @@ import { LanguageProvider } from "./components/lib/LanguageContext";
 export default function Home() {
 	return (
 		<LanguageProvider>
-			<main className="font-[family-name:var(--font-exo)] text-white flex flex-col gap-2 h-[100dvh] snap-y snap-mandatory transition duration-150 overflow-y-scroll z-0 scrollbar scrollbar-thumb-[#F7AB0A]/80 scrollbar-track-gray-400/20 scroll-smooth">
+			<main className="font-[family-name:var(--font-exo)] text-white flex flex-col gap-2 h-[100dvh] snap-y snap-mandatory transition duration-150 overflow-y-scroll z-0 scroll-smooth">
 				<Header />
 
 				<div className="fixed top-0 left-0 w-full h-full min-h-full -z-10">
@@ -38,14 +38,14 @@ export default function Home() {
 				<ContactGrid />
 				<div className="min-h-[40vh]"></div>
 				<footer>
-					<a
+					{/* <a
 						className="fixed bottom-0 left-0 flex items-center gap-2 hover:underline hover:underline-offset-4"
 						href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						Learn
-					</a>
+					</a> */}
 				</footer>
 			</main>
 		</LanguageProvider>
