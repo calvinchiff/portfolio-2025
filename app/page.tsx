@@ -2,15 +2,12 @@
 
 import Image from "next/image";
 import Tile from "@/app/components/ui/Tile";
-import Grid from "@/app/components/ui/Grid";
-import { translations } from "@/public/translations";
-import Link from "next/link";
-import GeneralGrid from "./components/grids/GeneralSection";
-import SkillsGrid from "./components/grids/SkillsSection";
-import ContactGrid from "./components/grids/ContactSection";
-import ProjectsGrid from "./components/grids/ProjectsSection";
-import CareerGrid from "./components/grids/CareerSection";
-import Header from "./components/Header";
+import GeneralGrid from "@/app/components/sections/GeneralSection";
+import SkillsGrid from "@/app/components/sections/SkillsSection";
+import ContactGrid from "@/app/components/sections/ContactSection";
+import ProjectsGrid from "@/app/components/sections/ProjectsSection";
+import CareerGrid from "@/app/components/sections/CareerSection";
+import Header from "@/app/components/ui/Header";
 import { LanguageProvider } from "./components/lib/LanguageContext";
 
 export default function Home() {
