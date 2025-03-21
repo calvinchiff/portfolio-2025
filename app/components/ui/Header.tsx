@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { translations } from "@/public/translations";
 import React, { useEffect, useState } from "react";
-import Tile from "@/app/components/ui/Tile";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
 import BG from "@/app/components/ui/BG";
 import { handleScrollToId } from "@/app/utils/scroll";
