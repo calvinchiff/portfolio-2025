@@ -5,7 +5,7 @@ import Section from "@/app/components/ui/Section";
 import { translations } from "@/public/translations";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
 
-export default function ProjectsGrid() {
+export default function ProjectsSection() {
 	const { language } = useLanguage();
 	return (
 		<Section customClassName="grid-rows-20 grid-cols-4" id="projects">

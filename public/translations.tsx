@@ -123,7 +123,7 @@ export const translations = {
 	fr: {
 		navbar: [
 			{ id: "general", title: "Général" },
-			{ id: "skills", title: "Compétences" },
+			{ id: "skills", title: "Skills" },
 			{ id: "career", title: "Carrière" },
 			{ id: "projects", title: "Projets" },
 			{ id: "contact", title: "Contact" }
@@ -147,14 +147,14 @@ export const translations = {
 				}
 			],
 			tiles: [
-				{ id: "skills", imageLink: "", title: "Compétences" },
+				{ id: "skills", imageLink: "", title: "Skills" },
 				{ id: "career", imageLink: "", title: "Carrière" },
 				{ id: "projects", imageLink: "", title: "Projets" }
 			]
 		},
 		skills: {
 			technicalSkills: {
-				title: "Compétences techniques",
+				title: "Skills techniques",
 				skills: [
 					{ id: "1", title: "JavaScript", desc: "blablabla", icon: "" },
 					{ id: "2", title: "JavaScript", desc: "blablabla", icon: "" },
@@ -165,7 +165,7 @@ export const translations = {
 				]
 			},
 			otherSkills: {
-				title: "Autres compétences",
+				title: "Autres skills",
 				skills: [
 					{ id: "1", title: "Français", desc: "blablabla", icon: "" },
 					{ id: "2", title: "Anglais", desc: "blablabla", icon: "" },
@@ -176,7 +176,7 @@ export const translations = {
 				]
 			},
 			bonusSkills: {
-				title: "Compétences supplémentaires",
+				title: "Skills supplémentaires",
 				skills: [
 					{ id: "1", title: "Créatif", desc: "blablabla", icon: "" },
 					{ id: "2", title: "Curieux", desc: "blablabla", icon: "" },

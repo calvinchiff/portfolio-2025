@@ -10,18 +10,23 @@ export default function LinkImageTile({
 }) {
 	return (
 		<Tile
-			title={title}
+			title=""
 			customClassName="cursor-pointer hover:text-glow hover:font-bold transition-all duration-150"
 			onClick={() => handleScrollToId(sectionLink)}
 			bottomRightCorner="arrow"
 		>
-			<Image
-				alt={sectionLink + " logo"}
-				src={imgSrc}
-				fill
-				objectFit="contain"
-				className="opacity-90 group-hover:opacity-100 md:blur-xs group-hover:blur-none duration-150"
-			/>
+			<div className="h-full flex flex-col gap-2">
+				<h1>{title}</h1>
+				<div className="relative h-full">
+					<Image
+						alt={sectionLink + " logo"}
+						src={imgSrc}
+						fill
+						objectFit="contain"
+						className="opacity-90 group-hover:opacity-100 md:blur-xs group-hover:blur-none duration-150"
+					/>
+				</div>
+			</div>
 		</Tile>
 	);
 }

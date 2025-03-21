@@ -5,7 +5,7 @@ import Section from "@/app/components/ui/Section";
 import { translations } from "@/public/translations";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
 
-export default function ContactGrid() {
+export default function ContactSection() {
 	const { language } = useLanguage();
 
 	return (

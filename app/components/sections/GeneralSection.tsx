@@ -5,10 +5,9 @@ import Tile from "@/app/components/ui/Tile";
 import Section from "@/app/components/ui/Section";
 import { translations } from "@/public/translations";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
-import { handleScrollToId } from "@/app/utils/scroll";
 import LinkImageTile from "@/app/components/ui/LinkImageTile";
 
-export default function GeneralGrid() {
+export default function GeneralSection() {
 	const { language } = useLanguage();
 
 	const listDescription = translations[language].general.description.map(
@@ -48,15 +47,19 @@ export default function GeneralGrid() {
 							/>
 						</div>
 						<div className="flex flex-col md:basis-2/3 self-center gap-3">
-							<h2>{translations[language].general.name}</h2>
-							<p>{age + translations[language].general.me}</p>
+							<div className="flex flex-row gap-4">
+								<h2>{translations[language].general.name}</h2>
+								<h2 className="font-normal">
+									{age + translations[language].general.me}
+								</h2>
+							</div>
 							<ul className="flex flex-col gap-2">{listDescription}</ul>
 						</div>
 					</div>
 				</Tile>
 			</div>
 
-			<div className="flex w-max-[90vw] h-full gap-2 basis-1/3 md:basis-1/2">
+			<div className="flex flex-row h-full gap-2 basis-1/3 md:basis-1/2">
 				{/* Skills Tile */}
 				<LinkImageTile
 					title={translations[language].general.tiles[0].title}

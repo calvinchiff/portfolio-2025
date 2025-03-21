@@ -5,7 +5,7 @@ import Section from "@/app/components/ui/Section";
 import { translations } from "@/public/translations";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
 
-export default function CareerGrid() {
+export default function CareerSection() {
 	return (
 		<Section id="career" nbLeftGridRows={2} nbRightGridRows={2}>
 			<Tile title="Timeline" customClassName="row-span-2">

@@ -5,7 +5,7 @@ import Section from "@/app/components/ui/Section";
 import { translations } from "@/public/translations";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
 
-export default function SkillsGrid() {
+export default function SkillsSection() {
 	const { language } = useLanguage();
 
 	return (
