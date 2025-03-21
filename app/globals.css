@@ -22,6 +22,12 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+@layer base {
+	h1 {
+		@apply text-center text-lg md:text-xl xl:text-2xl;
+	}
+}
+
 @layer utilities {
 	.mask-gradient {
 		--mask-direction: to bottom;
@@ -71,8 +77,9 @@ body {
 		--mask-direction: to bottom left;
 	}
 
-	.text-glow {
-		text-shadow: 0px 0px 15px rgba(252, 255, 210, 0.8);
+	.text-glow,
+	.hover\:text-glow:hover {
+		text-shadow: 0px 0px 15px rgba(252, 255, 210, 0.9);
 	}
 
 	.scrollbar-none::-webkit-scrollbar {

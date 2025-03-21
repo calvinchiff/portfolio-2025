@@ -1,25 +1,88 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Tile from "@/app/components/ui/Tile";
 import Section from "@/app/components/ui/Section";
 import { translations } from "@/public/translations";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
+import { handleScrollToId } from "@/app/utils/scroll";
 
 export default function GeneralGrid() {
 	const { language } = useLanguage();
 
 	return (
-		<Section id="general" nbLeftGridRows={2} nbRightGridRows={1}>
-			{/* General Grid */}
-			<Tile
-				title={translations[language].general.title}
-				customClassName="col-span-3"
-			>
-				tests
+		<Section
+			id="general"
+			customGridClassName=""
+			nbLeftGridRows={2}
+			nbRightGridRows={1}
+		>
+			{/* General Tile */}
+			<Tile title="" customClassName="col-span-3">
+				<div className="flex flex-row h-full">
+					<div className="basis-1/3 relative">
+						<Image
+							alt="Avatar logo"
+							src="/general/Me_Logo.png"
+							fill
+							objectFit="contain"
+						/>
+					</div>
+					<div className="basis-2/3 self-center">
+						<h2>{translations[language].general.name}</h2>
+						<p>{translations[language].general.me}</p>
+						<p>{translations[language].general.description}</p>
+					</div>
+				</div>
 			</Tile>
-			<Tile title={translations[language].general.tiles[0].title}></Tile>
-			<Tile title={translations[language].general.tiles[1].title}></Tile>
-			<Tile title={translations[language].general.tiles[2].title}></Tile>
+
+			{/* Skills Tile */}
+			<Tile
+				title={translations[language].general.tiles[0].title}
+				customClassName="cursor-pointer hover:text-glow hover:font-bold transition-all duration-150"
+				onClick={() => handleScrollToId("skills")}
+				bottomRightCorner="arrow"
+			>
+				<Image
+					alt="Skills logo"
+					src="/general/Skills_Logo.png"
+					fill
+					objectFit="contain"
+					className="p-2 opacity-90 group-hover:opacity-100 md:blur-xs group-hover:blur-none duration-150"
+				/>
+			</Tile>
+
+			{/* Career Tile */}
+			<Tile
+				title={translations[language].general.tiles[1].title}
+				customClassName="cursor-pointer hover:text-glow hover:font-bold transition-all duration-150"
+				onClick={() => handleScrollToId("career")}
+				bottomRightCorner="arrow"
+			>
+				<Image
+					alt="Skills logo"
+					src="/general/Career_Logo.png"
+					fill
+					objectFit="contain"
+					className="opacity-90 group-hover:opacity-100 md:blur-xs group-hover:blur-none duration-150"
+				/>
+			</Tile>
+
+			{/* Projects Tile */}
+			<Tile
+				title={translations[language].general.tiles[2].title}
+				customClassName="cursor-pointer hover:text-glow hover:font-bold transition-all duration-150"
+				onClick={() => handleScrollToId("projects")}
+				bottomRightCorner="arrow"
+			>
+				<Image
+					alt="Projects logo"
+					src="/general/Projects_Logo.png"
+					fill
+					objectFit="contain"
+					className="opacity-90 group-hover:opacity-100 md:blur-xs group-hover:blur-none duration-150"
+				/>
+			</Tile>
 		</Section>
 	);
 }
