@@ -26,6 +26,14 @@ body {
 	h1 {
 		@apply text-center text-lg md:text-xl xl:text-2xl;
 	}
+
+	img {
+		@apply select-none;
+		-webkit-user-drag: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		pointer-events: none;
+	}
 }
 
 @layer utilities {
