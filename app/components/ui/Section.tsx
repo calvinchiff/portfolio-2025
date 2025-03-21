@@ -53,7 +53,7 @@ export default function Section({
 				{/* Left invis grid */}
 				{renderInvisGrid("left", nbLeftGridRows)}
 				<div
-					className={`grid grid-cols-3 grid-rows-2 gap-2 h-full md:max-w-[90vw] aspect-[2/3] md:aspect-[3/2] ${customGridClassName} ${
+					className={`gap-2 h-full max-w-[90vw] aspect-[3/2] ${customGridClassName} ${
 						isCentered ? "" : InvisTileStyle + "mask-bottom"
 					}`}
 				>

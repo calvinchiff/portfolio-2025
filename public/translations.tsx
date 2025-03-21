@@ -14,15 +14,15 @@ export const translations = {
 			description: [
 				{
 					id: 0,
-					text: "Passionate about development, tech, and automobiles."
+					text: "passions: [dev, tech, automotive]"
 				},
 				{
 					id: 1,
-					text: "Curious - I love learning and exploring various fields, especially AI, MLOps, robotics, and Edge AI/Computing."
+					text: "also: [love learning, exploring various fields, AI, MLOps, robotics, Edge AI/Computing]"
 				},
 				{
 					id: 2,
-					text: "Creative - I enjoy imagining, sketching, and 3D modeling inventions with embedded systems (STM32) or just for woodworking projects."
+					text: "creativity: [enjoy imagining, sketching, and 3D modeling inventions involving embedded systems (STM32) or woodworking"
 				}
 			],
 			tiles: [
