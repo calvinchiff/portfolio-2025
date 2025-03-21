@@ -6,20 +6,11 @@ import React, { useEffect, useState } from "react";
 import Tile from "@/app/components/ui/Tile";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
 import BG from "@/app/components/ui/BG";
+import { handleScrollToId } from "@/app/utils/scroll";
 
 export default function Header() {
 	const [activeSection, setActiveSection] = useState<string | null>(null);
 	const { language, changeLanguage } = useLanguage();
-
-	function handleScrollToId(id: string) {
-		const element = document.getElementById(id);
-		if (element) {
-			element.scrollIntoView({
-				behavior: "smooth",
-				block: "center"
-			});
-		}
-	}
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -76,7 +67,11 @@ export default function Header() {
 				className="fixed top-10 md:top-[4dvh] right-[10dvw] h-10 md:h-15 w-10 md:w-15 overflow-hidden rounded-full cursor-pointer shadow-xl hover:shadow-white hover:shadow-xs"
 			>
 				<Image
-					src={language === "en" ? "/Flag_UK_1.png" : "/Flag_FR_1.png"}
+					src={
+						language === "en"
+							? "/header/Flag_UK_1.png"
+							: "/header/Flag_FR_1.png"
+					}
 					fill={true}
 					alt="Language Toggle between EN/FR"
 					objectFit="contain"

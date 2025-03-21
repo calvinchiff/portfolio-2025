@@ -24,7 +24,7 @@ export default function ContactGrid() {
 			<Tile customClassName="col-span-2 md:col-span-1 cursor-pointer">
 				<div className="h-full w-full flex items-center justify-center">
 					<Image
-						src="/linkedin-logo.png"
+						src="/contact/linkedin-logo.png"
 						height={160}
 						width={160}
 						alt="Logo of Linkedin"
@@ -34,7 +34,7 @@ export default function ContactGrid() {
 			<Tile customClassName="col-span-2 md:col-span-1 cursor-pointer">
 				<div className="h-full w-full flex items-center justify-center">
 					<Image
-						src="/github-logo.png"
+						src="/contact/github-logo.png"
 						height={160}
 						width={160}
 						alt="Logo of Linkedin"
@@ -44,7 +44,7 @@ export default function ContactGrid() {
 			<Tile customClassName="col-span-4 md:col-span-1 cursor-pointer">
 				<div className="h-full w-full flex items-center justify-center">
 					<Image
-						src="/linkedin-logo.png"
+						src="/contact/linkedin-logo.png"
 						height={160}
 						width={160}
 						alt="Logo of Linkedin"
