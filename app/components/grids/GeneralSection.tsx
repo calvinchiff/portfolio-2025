@@ -10,6 +10,23 @@ import { handleScrollToId } from "@/app/utils/scroll";
 export default function GeneralGrid() {
 	const { language } = useLanguage();
 
+	const listDescription = translations[language].general.description.map(
+		(line) => <li key={line.id}>{line.text}</li>
+	);
+
+	const birthDate = new Date("2001-03-30");
+	const today = new Date();
+
+	let age = today.getFullYear() - birthDate.getFullYear();
+	const monthDifference = today.getMonth() - birthDate.getMonth();
+
+	if (
+		monthDifference < 0 ||
+		(monthDifference === 0 && today.getDate() < birthDate.getDate())
+	) {
+		age--;
+	}
+
 	return (
 		<Section
 			id="general"
@@ -30,8 +47,8 @@ export default function GeneralGrid() {
 					</div>
 					<div className="basis-2/3 self-center">
 						<h2>{translations[language].general.name}</h2>
-						<p>{translations[language].general.me}</p>
-						<p>{translations[language].general.description}</p>
+						<p>{age + translations[language].general.me}</p>
+						<ul>{listDescription}</ul>
 					</div>
 				</div>
 			</Tile>

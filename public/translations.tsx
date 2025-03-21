@@ -10,12 +10,20 @@ export const translations = {
 		general: {
 			name: "Calvin CHIFFOT",
 			title: "Me",
-			me: "23 years old, French",
+			me: " years old, French",
 			description: [
-				"Passionate about dev, emerging tech, automotive.",
-				"Huge interest in AI, embedded, MLOPS, robotics and edge computing.",
-				"Eager to learn - currently exploring embedded with STM32 and learning about edge AI/Computing",
-				"Creative mind, I like to 3D model stuff to create later with 3D printing + embedded or just to plan wood working."
+				{
+					id: 0,
+					text: "Passionate about development, tech, and automobiles."
+				},
+				{
+					id: 1,
+					text: "Curious - I love learning and exploring various fields, especially AI, MLOps, robotics, and Edge AI/Computing."
+				},
+				{
+					id: 2,
+					text: "Creative - I enjoy imagining, sketching, and 3D modeling inventions with embedded systems (STM32) or just for woodworking projects."
+				}
 			],
 			tiles: [
 				{ id: "skills", imageLink: "", title: "Skills" },
@@ -123,12 +131,20 @@ export const translations = {
 		general: {
 			name: "Calvin CHIFFOT",
 			title: "Moi",
-			me: "23 ans, Français",
+			me: " ans, Français",
 			description: [
-				"Passionné par le développement, les technologies émergentes, l'automobile.",
-				"Grand intérêt pour l'IA, l'embarqué, MLOPS, la robotique et le edge computing.",
-				"Désireux d'apprendre - actuellement en exploration de l'embarqué avec STM32 et apprentissage de l'Edge AI/Computing.",
-				"Esprit créatif, j'aime modéliser en 3D pour créer plus tard avec l'impression 3D + embarqué ou juste pour planifier des projets de menuiserie."
+				{
+					id: 0,
+					text: "Passionné par le développement, la tech et l'automobile."
+				},
+				{
+					id: 1,
+					text: "Curieux - J'adore apprendre et découvrir de nombreux domaines notamment autour de l'IA, le MLOPS, la robotique et l'Edge AI/Computing'."
+				},
+				{
+					id: 2,
+					text: "Créatif - J'aime imaginer, dessiner puis modéliser en 3D des inventions avec de l'embarqué (STM32) ou juste pour des projets de menuiserie."
+				}
 			],
 			tiles: [
 				{ id: "skills", imageLink: "", title: "Compétences" },
