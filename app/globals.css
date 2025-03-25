@@ -33,7 +33,7 @@ body {
 
 	p,
 	li {
-		@apply text-sm md:text-base xl:text-base;
+		@apply text-sm md:text-base xl:text-lg;
 	}
 
 	img {

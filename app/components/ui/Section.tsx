@@ -1,7 +1,7 @@
 import React from "react";
 
 type SectionProps = {
-	customGridClassName: string;
+	customGridClassName?: string;
 	id: string;
 	children: React.ReactNode;
 	nbLeftGridRows?: 0 | 1 | 2;
@@ -49,7 +49,7 @@ export default function Section({
 }: SectionProps) {
 	return (
 		<section id={id} className="snap-center">
-			<div className="overflow-hidden flex flex-nowrap justify-center items-center w-full h-[65vh] gap-2">
+			<div className="overflow-hidden flex justify-center items-center w-full h-[65vh] gap-2">
 				{/* Left invis grid */}
 				{renderInvisGrid("left", nbLeftGridRows)}
 				<div

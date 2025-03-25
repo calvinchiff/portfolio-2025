@@ -176,7 +176,7 @@ export const translations = {
 				]
 			},
 			bonusSkills: {
-				title: "Skills supplémentaires",
+				title: "Skills bonus",
 				skills: [
 					{ id: "1", title: "Créatif", desc: "blablabla", icon: "" },
 					{ id: "2", title: "Curieux", desc: "blablabla", icon: "" },
