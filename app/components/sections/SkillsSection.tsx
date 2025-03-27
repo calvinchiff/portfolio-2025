@@ -72,7 +72,7 @@ export default function SkillsSection() {
 					description: "Linux"
 				},
 				{
-					name: "More",
+					name: "Python, Java and C bases",
 					icon: "/skills/More_icon.png",
 					description: "Python, Java and C bases"
 				}
@@ -83,18 +83,33 @@ export default function SkillsSection() {
 			title: translations[language].skills["otherSkills"].title,
 			skills: [
 				{
-					name: "French",
-					icon: "/skills/JS_icon.png",
+					name: "Native French",
+					icon: "/skills/FR_icon.png",
 					description: "blabla"
 				},
 				{
-					name: "English",
-					icon: "/skills/JS_icon.png",
+					name: "Fluent in English",
+					icon: "/skills/EN_icon.png",
 					description: "blabla"
 				},
 				{
-					name: "German",
-					icon: "/skills/JS_icon.png",
+					name: "Basic German",
+					icon: "/skills/DE_icon.png",
+					description: "blabla"
+				},
+				{
+					name: "🚗 + 🏍️ Drinving licenses",
+					icon: "/skills/License_icon.png",
+					description: "blabla"
+				},
+				{
+					name: "Agile Software Dev",
+					icon: "/skills/Agile_icon.png",
+					description: "blabla"
+				},
+				{
+					name: "Problem solving",
+					icon: "/skills/Problem_icon.png",
 					description: "blabla"
 				}
 			]
@@ -105,18 +120,33 @@ export default function SkillsSection() {
 			skills: [
 				{
 					name: "Sport",
-					icon: "/skills/JS_icon.png",
-					description: "blabla"
+					icon: "/skills/Sport_icon.png",
+					subList: [
+						{ name: "StreetWorkout/Calisthenics", icon: "🏋️" },
+						{ name: "Motorcycle / Dirtbike", icon: "🏍️" },
+						{ name: "Ski", icon: "🎿" },
+						{ name: "Martial Arts", icon: "🥋" }
+					]
 				},
 				{
 					name: "Creativity",
-					icon: "/skills/JS_icon.png",
-					description: "blabla"
+					icon: "/skills/Creative_icon.png",
+					subList: [
+						{ name: "3D Modelling", icon: "📐" },
+						{ name: "Woodworking", icon: "🪵" },
+						{ name: "Embedded/IoT", icon: "🎛️" }
+					]
 				},
 				{
 					name: "Curiosity",
-					icon: "/skills/JS_icon.png",
-					description: "blabla"
+					icon: "/skills/Explorer_icon.png",
+					subList: [
+						{ name: "Hardware", icon: "📟" },
+						{ name: "Robotics", icon: "🦾" },
+						{ name: "AI / ML / Edge AI", icon: "🤖" },
+						{ name: "Mechanics", icon: "🔧" },
+						{ name: "Quantum physics", icon: "🔬" }
+					]
 				}
 			]
 		}
@@ -146,31 +176,48 @@ export default function SkillsSection() {
 							bottomRightCorner={active === tile.id ? "checked" : "toggle"}
 						>
 							<div
-								className={`grid gap-4 h-full p-4 ${
+								className={`grid h-full p-4 ${
 									active === tile.id
-										? "grid-cols-2"
-										: "grid-cols-3 place-items-center"
+										? "grid-cols-2 gap-4"
+										: "grid-cols-3 gap-1 place-items-center"
 								}`}
 							>
 								{tile.skills.map((skill) => (
-									<div key={skill.name} className="group flex flex-row">
-										<div className="relative w-6 h-6 md:w-10 md:h-10 xl:w-14 xl:h-14 self-center">
-											<Image
-												src={skill.icon}
-												alt={skill.name + " icon"}
-												fill
-												objectFit="contain"
-												className={`transition-all duration-300 ${
+									<div key={skill.name} className="group flex flex-col">
+										<div className="group flex flex-row">
+											<div
+												className={`relative transition-all duration-300 ${
 													active === tile.id
-														? "drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]"
-														: "opacity-40 group-hover:opacity-60"
+														? "self-center w-6 h-6 md:w-10 md:h-10 xl:w-14 xl:h-14"
+														: "w-4 h-4 md:w-8 md:h-8 xl:w-8 xl:h-8"
 												}`}
-											/>
+											>
+												<Image
+													src={skill.icon}
+													alt={skill.name + " icon"}
+													fill
+													objectFit="contain"
+													className={`transition-all duration-300 ${
+														active === tile.id
+															? "drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]"
+															: "opacity-40 group-hover:opacity-60"
+													}`}
+												/>
+											</div>
+											{active === tile.id && (
+												<p className="ml-2 self-center">
+													<strong>{skill.name}</strong>
+												</p>
+											)}
 										</div>
-										{active === tile.id && (
-											<p className="ml-2 self-center">
-												<strong>{skill.name}</strong>
-											</p>
+										{active === "bonusSkills" && skill.subList && (
+											<ul className="mt-2 pl-6 space-y-1 text-sm">
+												{skill.subList.map((sub) => (
+													<li key={sub.name} className="flex items-center">
+														<span className="mr-2">{sub.icon}</span> {sub.name}
+													</li>
+												))}
+											</ul>
 										)}
 									</div>
 								))}
