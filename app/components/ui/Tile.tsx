@@ -7,7 +7,7 @@ interface TileProps {
 	children: React.ReactNode;
 	customClassName?: string;
 	onClick?: () => void;
-	bottomRightCorner?: "arrow" | "toggle" | "";
+	bottomRightCorner?: "arrow" | "toggle" | "checked" | "";
 }
 
 export default function Tile({
@@ -21,7 +21,9 @@ export default function Tile({
 		bottomRightCorner === "arrow"
 			? "/general/Arrow_right.png"
 			: bottomRightCorner === "toggle"
-			? "/general/Toggle_icon.png"
+			? "/Toggle_icon.png"
+			: bottomRightCorner === "checked"
+			? "/Toggle_checked.png"
 			: null;
 
 	return (
@@ -37,7 +39,13 @@ export default function Tile({
 				<div className="w-full h-full relative">{children}</div>
 			</div>
 			{imageSrc && (
-				<div className="h-[4vh] w-[4vh] absolute bottom-4 right-4 md:opacity-40 md:group-hover:opacity-100  duration-150">
+				<div
+					className={`h-[4vh] w-[4vh] absolute bottom-4 right-4 ${
+						bottomRightCorner === "checked"
+							? "opacity-100"
+							: "md:opacity-40 md:group-hover:opacity-100"
+					} duration-150`}
+				>
 					<Image
 						src={imageSrc}
 						alt={bottomRightCorner}
