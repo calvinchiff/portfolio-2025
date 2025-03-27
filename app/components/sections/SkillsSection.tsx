@@ -5,8 +5,6 @@ import Section from "@/app/components/ui/Section";
 import { motion } from "framer-motion";
 import { translations } from "@/public/translations";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
-import BG from "../ui/BG";
-import { siJavascript, siNodedotjs, siReact, siTypescript } from "simple-icons";
 
 export default function SkillsSection() {
 	const { language } = useLanguage();
