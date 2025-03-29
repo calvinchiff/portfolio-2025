@@ -3,7 +3,7 @@ import Tile from "@/app/components/ui/Tile";
 import Image from "next/image";
 import Section from "@/app/components/ui/Section";
 import { motion } from "framer-motion";
-import { translations } from "@/public/translations";
+import { skillsTiles } from "@/public/skillsData";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
 
 export default function SkillsSection() {
@@ -11,148 +11,8 @@ export default function SkillsSection() {
 	const [active, setActive] = useState("technicalSkills");
 
 	// Définition des tuiles
-	const tiles = [
-		{
-			id: "technicalSkills",
-			title: translations[language].skills["technicalSkills"].title,
-			skills: [
-				{
-					name: "JavaScript",
-					icon: "/skills/JS_icon.png",
-					description: ""
-				},
-				{
-					name: "React",
-					icon: "/skills/React_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "Git",
-					icon: "/skills/Git_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "TypeScript",
-					icon: "/skills/TS_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "Node.js",
-					icon: "/skills/Node_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "Cloud",
-					icon: "/skills/Cloud_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "Docker",
-					icon: "/skills/Docker_icon.webp",
-					description: "blabla"
-				},
-				{
-					name: "Angular",
-					icon: "/skills/Angular_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "Github Actions",
-					icon: "/skills/GithubActions_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "SQL",
-					icon: "/skills/SQL_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "Linux",
-					icon: "/skills/Linux_icon.png",
-					description: "Linux"
-				},
-				{
-					name: "Python, Java and C bases",
-					icon: "/skills/More_icon.png",
-					description: "Python, Java and C bases"
-				}
-			]
-		},
-		{
-			id: "otherSkills",
-			title: translations[language].skills["otherSkills"].title,
-			skills: [
-				{
-					name: "Native French",
-					icon: "/skills/FR_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "Fluent in English",
-					icon: "/skills/EN_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "Basic German",
-					icon: "/skills/DE_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "🚗 + 🏍️ Drinving licenses",
-					icon: "/skills/License_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "Agile Software Dev",
-					icon: "/skills/Agile_icon.png",
-					description: "blabla"
-				},
-				{
-					name: "Problem solving",
-					icon: "/skills/Problem_icon.png",
-					description: "blabla"
-				}
-			]
-		},
-		{
-			id: "bonusSkills",
-			title: translations[language].skills["bonusSkills"].title,
-			skills: [
-				{
-					name: "Sport",
-					icon: "/skills/Sport_icon.png",
-					subList: [
-						{ name: "StreetWorkout/Calisthenics", icon: "🏋️" },
-						{ name: "Motorcycle / Dirtbike", icon: "🏍️" },
-						{ name: "Ski", icon: "🎿" },
-						{ name: "Martial Arts", icon: "🥋" }
-					]
-				},
-				{
-					name: "Creativity",
-					icon: "/skills/Creative_icon.png",
-					subList: [
-						{ name: "3D Modelling", icon: "📐" },
-						{ name: "Woodworking", icon: "🪵" },
-						{ name: "Embedded/IoT", icon: "🎛️" }
-					]
-				},
-				{
-					name: "Curiosity",
-					icon: "/skills/Explorer_icon.png",
-					subList: [
-						{ name: "Hardware", icon: "📟" },
-						{ name: "Robotics", icon: "🦾" },
-						{ name: "AI / ML / Edge AI", icon: "🤖" },
-						{ name: "Mechanics", icon: "🔧" },
-						{ name: "Quantum physics", icon: "🔬" }
-					]
-				}
-			]
-		}
-	];
 
-	const reorderedTiles = [...tiles].sort((a, b) =>
+	const reorderedTiles = [...skillsTiles].sort((a, b) =>
 		a.id === active ? -1 : b.id === active ? 1 : 0
 	);
 
@@ -172,7 +32,7 @@ export default function SkillsSection() {
 						transition={{ duration: 0.5, ease: "easeInOut" }}
 					>
 						<Tile
-							title={tile.title}
+							title={tile.name[language]}
 							bottomRightCorner={active === tile.id ? "checked" : "toggle"}
 						>
 							<div
@@ -183,7 +43,7 @@ export default function SkillsSection() {
 								}`}
 							>
 								{tile.skills.map((skill) => (
-									<div key={skill.name} className="group flex flex-col">
+									<div key={skill.icon} className="group flex flex-col">
 										<div className="group flex flex-row">
 											<div
 												className={`relative transition-all duration-300 ${
@@ -194,7 +54,7 @@ export default function SkillsSection() {
 											>
 												<Image
 													src={skill.icon}
-													alt={skill.name + " icon"}
+													alt={skill.name[language] + " icon"}
 													fill
 													objectFit="contain"
 													className={`transition-all duration-300 ${
@@ -206,7 +66,7 @@ export default function SkillsSection() {
 											</div>
 											{active === tile.id && (
 												<p className="ml-2 self-center">
-													<strong>{skill.name}</strong>
+													<strong>{skill.name[language]}</strong>
 												</p>
 											)}
 										</div>
@@ -214,7 +74,8 @@ export default function SkillsSection() {
 											<ul className="mt-2 pl-6 space-y-1 text-sm">
 												{skill.subList.map((sub) => (
 													<li key={sub.name} className="flex items-center">
-														<span className="mr-2">{sub.icon}</span> {sub.name}
+														<span className="mr-2">{sub.icon}</span>{" "}
+														{sub.name[language]}
 													</li>
 												))}
 											</ul>
