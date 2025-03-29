@@ -73,7 +73,10 @@ export default function SkillsSection() {
 										{active === "bonusSkills" && skill.subList && (
 											<ul className="mt-2 pl-6 space-y-1 text-sm">
 												{skill.subList.map((sub) => (
-													<li key={sub.name} className="flex items-center">
+													<li
+														key={sub.name[language]}
+														className="flex items-center"
+													>
 														<span className="mr-2">{sub.icon}</span>{" "}
 														{sub.name[language]}
 													</li>
