@@ -3,16 +3,16 @@ import React from "react";
 import Image from "next/image";
 import Tile from "@/app/components/ui/Tile";
 import Section from "@/app/components/ui/Section";
-import { translations } from "@/public/translations";
+import { generalData } from "@/public/data/generalData";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
 import LinkImageTile from "@/app/components/ui/LinkImageTile";
 
 export default function GeneralSection() {
 	const { language } = useLanguage();
 
-	const listDescription = translations[language].general.description.map(
-		(line) => <li key={line.id}>{line.text}</li>
-	);
+	const listDescription = generalData.description.map((line) => (
+		<li key={line.id}>{line.text[language]}</li>
+	));
 
 	const birthDate = new Date("2001-03-30");
 	const today = new Date();
@@ -48,9 +48,9 @@ export default function GeneralSection() {
 						</div>
 						<div className="flex flex-col md:basis-2/3 self-center gap-3">
 							<div className="flex flex-row gap-4">
-								<h2>{translations[language].general.name}</h2>
+								<h2>{generalData.name}</h2>
 								<h2 className="font-normal">
-									{age + translations[language].general.me}
+									{age + generalData.me[language]}
 								</h2>
 							</div>
 							<ul className="flex flex-col gap-2">{listDescription}</ul>
@@ -62,21 +62,21 @@ export default function GeneralSection() {
 			<div className="flex flex-row h-full gap-2 basis-1/3 md:basis-1/2">
 				{/* Skills Tile */}
 				<LinkImageTile
-					title={translations[language].general.tiles[0].title}
+					title={generalData.tiles[0].title[language]}
 					sectionLink="skills"
 					imgSrc="/general/Skills_Logo.png"
 				/>
 
 				{/* Career Tile */}
 				<LinkImageTile
-					title={translations[language].general.tiles[1].title}
+					title={generalData.tiles[1].title[language]}
 					sectionLink="career"
 					imgSrc="/general/Career_Logo.png"
 				/>
 
 				{/* Projects Tile */}
 				<LinkImageTile
-					title={translations[language].general.tiles[2].title}
+					title={generalData.tiles[2].title[language]}
 					sectionLink="projects"
 					imgSrc="/general/Projects_Logo.png"
 				/>

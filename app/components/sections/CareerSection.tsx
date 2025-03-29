@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Tile from "@/app/components/ui/Tile";
 import Section from "@/app/components/ui/Section";
-import { translations } from "@/public/translations";
+import { careerData } from "@/public/data/careerData";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
 
 export default function CareerSection() {

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Tile from "@/app/components/ui/Tile";
 import Section from "@/app/components/ui/Section";
-import { translations } from "@/public/translations";
+import { contactData } from "@/public/data/contactData";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
 
 export default function ContactSection() {
@@ -17,8 +17,8 @@ export default function ContactSection() {
 		>
 			<Tile customClassName="col-span-4 md:col-span-3 row-span-2 md:row-span-1 cursor-pointer">
 				<div className="h-full gap-4 flex flex-col text-center items-center justify-center">
-					<p>{translations[language].contact.text1}</p>
-					<p>{translations[language].contact.text2}</p>
+					<p>{contactData.text1[language]}</p>
+					<p>{contactData.text2[language]}</p>
 				</div>
 			</Tile>
 			<Tile customClassName="col-span-2 md:col-span-1 cursor-pointer">

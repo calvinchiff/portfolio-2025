@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { translations } from "@/public/translations";
+import { navbarData } from "@/public/data/navbarData";
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
 import BG from "@/app/components/ui/BG";
@@ -39,7 +39,7 @@ export default function Header() {
 		};
 	}, []);
 
-	const listNavbar = translations[language].navbar.map((x) => (
+	const listNavbar = navbarData.map((x) => (
 		<button
 			onClick={() => handleScrollToId(x.id)}
 			key={x.id}
@@ -49,7 +49,7 @@ export default function Header() {
 					: "text-gray-500"
 			}`}
 		>
-			{x.title}
+			{x.title[language]}
 		</button>
 	));
 

@@ -3,7 +3,7 @@ import Tile from "@/app/components/ui/Tile";
 import Image from "next/image";
 import Section from "@/app/components/ui/Section";
 import { motion } from "framer-motion";
-import { skillsTiles } from "@/public/skillsData";
+import { skillsData } from "@/public/data/skillsData";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
 
 export default function SkillsSection() {
@@ -12,7 +12,7 @@ export default function SkillsSection() {
 
 	// Définition des tuiles
 
-	const reorderedTiles = [...skillsTiles].sort((a, b) =>
+	const reorderedTiles = [...skillsData].sort((a, b) =>
 		a.id === active ? -1 : b.id === active ? 1 : 0
 	);
 

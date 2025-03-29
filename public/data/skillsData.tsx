@@ -1,4 +1,4 @@
-export const skillsTiles = [
+export const skillsData = [
 	{
 		id: "technicalSkills",
 		name: { en: "Technical skills", fr: "Skills techniques" },
