@@ -32,7 +32,8 @@ body {
 	}
 
 	p,
-	li {
+	li,
+	span {
 		@apply text-sm md:text-base xl:text-lg;
 	}
 
