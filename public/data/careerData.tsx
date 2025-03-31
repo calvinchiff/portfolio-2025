@@ -40,8 +40,8 @@ export const careerData = {
 		{
 			id: "2",
 			title: {
-				en: "DevOps intern developer",
-				fr: "Développeur stagiaire DevOps"
+				en: "DevOps intern dev",
+				fr: "Stage dev DevOps"
 			},
 			company: "Arkea",
 			description: {
@@ -58,8 +58,8 @@ export const careerData = {
 		{
 			id: "3",
 			title: {
-				en: "Bachelor DevOps",
-				fr: "Bachelor DevOps"
+				en: "Bachelor DevOps CDA",
+				fr: "Bachelor DevOps CDA"
 			},
 			company: "",
 			description: {
@@ -79,7 +79,7 @@ export const careerData = {
 		},
 		{
 			id: "4",
-			title: { en: "Software Dev Parttime", fr: "Développeur alternant" },
+			title: { en: "Dev apprenticeship", fr: "Développeur alternant" },
 			company: "SCC",
 			description: {
 				en: "During my apprenticeship, I designed, developed, and deployed an automated data ingestion tool using Azure Data Factory and SQL to optimize data processing. I also worked on full-stack web applications with HTML/CSS, JavaScript, and Node.js. Lastly, I contributed to the integration and deployment of cloud-based projects using AWS, implementing CI/CD pipelines with GitHub Actions to ensure continuous delivery.",
@@ -110,8 +110,8 @@ export const careerData = {
 		{
 			id: "6",
 			title: {
-				en: "Technical Consultant Dev Parttime",
-				fr: "Développeur Consultant Technique alternant"
+				en: "Dev apprenticeship",
+				fr: "Dev alternant"
 			},
 			company: "LTTD Consulting",
 			description: {
