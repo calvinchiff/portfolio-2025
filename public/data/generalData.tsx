@@ -23,6 +23,13 @@ export const generalData = {
 				en: "creativity: [enjoy imagining, sketching, and 3D modeling inventions involving embedded systems (STM32) or woodworking]",
 				fr: "créativité : [j'aime imaginer, dessiner et modéliser en 3D des inventions impliquant des systèmes embarqués (STM32) ou le travail du bois]"
 			}
+		},
+		{
+			id: 3,
+			text: {
+				en: "basically love humans engineering and creations (mechanical, hardware, robotics...)",
+				fr: "j'aime tout ce qui touche à l'ingénieurie et la créativité de l'Homme (mécanique, hardware, robotique...)"
+			}
 		}
 	],
 	tiles: [

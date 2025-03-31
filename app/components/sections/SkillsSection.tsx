@@ -36,9 +36,9 @@ export default function SkillsSection() {
 							bottomRightCorner={active === tile.id ? "checked" : "toggle"}
 						>
 							<div
-								className={`grid h-full p-4 ${
+								className={`grid h-full p-1 md:p-4 ${
 									active === tile.id
-										? "grid-cols-2 gap-4"
+										? "grid-cols-2 md:gap-4"
 										: "grid-cols-3 gap-1 place-items-center"
 								}`}
 							>
@@ -71,7 +71,7 @@ export default function SkillsSection() {
 											)}
 										</div>
 										{active === "bonusSkills" && skill.subList && (
-											<ul className="mt-2 pl-6 space-y-1 text-sm">
+											<ul className="md:mt-2 pl-6 space-y-1 text-sm">
 												{skill.subList.map((sub) => (
 													<li
 														key={sub.name[language]}

@@ -61,7 +61,7 @@ export const skillsData = [
 			{
 				name: {
 					en: "Python, Java and C bases",
-					fr: "Bases en Python, Java et C"
+					fr: "Bases en Python, Java, C"
 				},
 				icon: "/skills/More_icon.png",
 				description: ""
@@ -88,7 +88,7 @@ export const skillsData = [
 				description: ""
 			},
 			{
-				name: { en: "🚗 + 🏍️ Driving licenses", fr: "Permis voiture + moto" },
+				name: { en: "🚗 + 🏍️ Driving licenses", fr: "Permis 🚗 + 🏍️" },
 				icon: "/skills/License_icon.png",
 				description: ""
 			},
@@ -114,13 +114,13 @@ export const skillsData = [
 				subList: [
 					{
 						name: {
-							en: "StreetWorkout/Calisthenics",
-							fr: "StreetWorkout/Calisthenics"
+							en: "Workout/Calisthenics",
+							fr: "Workout"
 						},
 						icon: "🏋️"
 					},
 					{
-						name: { en: "Motorcycle / Dirtbike", fr: "Moto / Dirtbike" },
+						name: { en: "Motorcycle", fr: "Moto" },
 						icon: "🏍️"
 					},
 					{ name: { en: "Ski", fr: "Ski" }, icon: "🎿" },
@@ -133,17 +133,17 @@ export const skillsData = [
 				subList: [
 					{ name: { en: "3D Modelling", fr: "Modélisation 3D" }, icon: "📐" },
 					{ name: { en: "Woodworking", fr: "Travail du bois" }, icon: "🪵" },
-					{ name: { en: "Embedded/IoT", fr: "Embarqué/IoT" }, icon: "🎛️" }
+					{ name: { en: "Embedded/IoT", fr: "Embarqué/IoT" }, icon: "🎛️" },
+					{ name: { en: "Robotics", fr: "Robotique" }, icon: "🦾" }
 				]
 			},
 			{
 				name: { en: "Curiosity", fr: "Curiosité" },
 				icon: "/skills/Explorer_icon.png",
 				subList: [
-					{ name: { en: "Hardware", fr: "Matériel informatique" }, icon: "📟" },
-					{ name: { en: "Robotics", fr: "Robotique" }, icon: "🦾" },
+					{ name: { en: "Hardware", fr: "Hardware" }, icon: "📟" },
 					{
-						name: { en: "AI / ML / Edge AI", fr: "IA / ML / Edge AI" },
+						name: { en: "AI/ML/Edge AI", fr: "IA/ML/Edge AI" },
 						icon: "🤖"
 					},
 					{ name: { en: "Mechanics", fr: "Mécanique" }, icon: "🔧" },

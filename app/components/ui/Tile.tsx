@@ -28,7 +28,7 @@ export default function Tile({
 
 	return (
 		<div
-			className={`relative rounded-[35px] backdrop-blur-md p-5 w-full h-full group ${customClassName}`}
+			className={`relative rounded-[35px] backdrop-blur-md p-3 md:p-5 w-full h-full group ${customClassName}`}
 			onClick={onClick}
 		>
 			{/* Background layer */}
