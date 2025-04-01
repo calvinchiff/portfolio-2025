@@ -5,6 +5,7 @@ import Section from "@/app/components/ui/Section";
 import { motion } from "framer-motion";
 import { skillsData } from "@/public/data/skillsData";
 import { useLanguage } from "@/app/components/lib/LanguageContext";
+import { Toggle } from "../ui/Toggle";
 
 export default function SkillsSection() {
 	const { language } = useLanguage();
@@ -33,8 +34,11 @@ export default function SkillsSection() {
 					>
 						<Tile
 							title={tile.name[language]}
-							bottomRightCorner={active === tile.id ? "checked" : "toggle"}
+							// bottomRightCorner={active === tile.id ? "checked" : "toggle"}
 						>
+							<div className="absolute bottom-3 md:bottom-5 right-3 md:right-5">
+								<Toggle isActive={active === tile.id ? true : false} />
+							</div>
 							<div
 								className={`grid h-full p-1 md:p-4 ${
 									active === tile.id
