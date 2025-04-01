@@ -14,7 +14,7 @@ export default function ProjectsSection() {
 	const [activeCategory, setActiveCategory] = useState<Category>("dev");
 	const [projectIndex, setProjectIndex] = useState(0);
 
-	const currentProjects = projectsData[activeCategory];
+	const currentProjects = projectsData.projects[activeCategory];
 
 	useEffect(() => {
 		setProjectIndex(0);
@@ -65,9 +65,41 @@ export default function ProjectsSection() {
 					</button>
 
 					<Tile
-						title={`${currentProjects[projectIndex].title[language]} #${currentProjects[projectIndex].id}`}
+						title={`${
+							currentProjects[projectIndex]
+								? `${currentProjects[projectIndex].title[language]} #${currentProjects[projectIndex].id}`
+								: "Loading..."
+						}`}
 						customClassName=""
-					/>
+					>
+						{currentProjects[projectIndex] && (
+							<div className="flex flex-col gap-1 md:gap-2 md:mt-2 p-2 md:p-4">
+								{Object.entries(projectsData.contentTitles).map(
+									([key, label]) => {
+										const value = (currentProjects[projectIndex] as any)?.[key];
+
+										if (
+											!value ||
+											(typeof value === "object" && !value[language])
+										) {
+											return null;
+										}
+
+										return (
+											<div key={key} className="flex gap-2">
+												<span className="font-semibold">
+													{label[language]} :
+													<span className="opacity-60 ml-2">
+														{value[language] || value}
+													</span>
+												</span>
+											</div>
+										);
+									}
+								)}
+							</div>
+						)}
+					</Tile>
 				</div>
 
 				<div className="flex flex-row gap-2 md:h-[70px]">
