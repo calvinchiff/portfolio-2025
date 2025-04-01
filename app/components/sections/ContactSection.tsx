@@ -15,43 +15,51 @@ export default function ContactSection() {
 			nbLeftGridRows={2}
 			nbRightGridRows={2}
 		>
-			<Tile customClassName="col-span-4 md:col-span-3 row-span-2 md:row-span-1 cursor-pointer">
-				<div className="h-full gap-4 flex flex-col text-center items-center justify-center">
-					<p>{contactData.text1[language]}</p>
-					<p>{contactData.text2[language]}</p>
+			<div className="flex flex-col h-full gap-2">
+				<Tile customClassName="basis-1/2 md:col-span-3 row-span-2 md:row-span-1 cursor-pointer">
+					<div className="h-full gap-4 flex flex-col text-center items-center justify-center">
+						<span>{contactData.text1[language]}</span>
+						<span>{contactData.text2[language]}</span>
+					</div>
+				</Tile>
+				<div className="flex flex-row basis-1/2 gap-2">
+					<div className="flex flex-col md:flex-row w-full gap-2 basis-1/2 md:basis-2/3">
+						<Tile customClassName="cursor-pointer ">
+							<div className="h-full w-full flex items-center justify-center">
+								<Image
+									src="/contact/linkedin-logo.png"
+									objectFit="contain"
+									fill
+									alt="Logo of Linkedin"
+								/>
+							</div>
+						</Tile>
+						<Tile customClassName="cursor-pointer">
+							<div className="h-full w-full flex items-center justify-center">
+								<Image
+									src="/contact/github-logo.png"
+									objectFit="contain"
+									fill
+									alt="Logo of Linkedin"
+								/>
+							</div>
+						</Tile>
+					</div>
+					<div className="basis-1/2 md:basis-1/3">
+						<Tile customClassName="cursor-pointer">
+							<div className="h-full w-full flex items-center justify-center">
+								<Image
+									src="/contact/resume-logo.png"
+									objectFit="contain"
+									fill
+									alt="Logo of Resume"
+									className="invert brightness-200 rotate-45 scale-75 opacity-70"
+								/>
+							</div>
+						</Tile>
+					</div>
 				</div>
-			</Tile>
-			<Tile customClassName="col-span-2 md:col-span-1 cursor-pointer">
-				<div className="h-full w-full flex items-center justify-center">
-					<Image
-						src="/contact/linkedin-logo.png"
-						height={160}
-						width={160}
-						alt="Logo of Linkedin"
-					/>
-				</div>
-			</Tile>
-			<Tile customClassName="col-span-2 md:col-span-1 cursor-pointer">
-				<div className="h-full w-full flex items-center justify-center">
-					<Image
-						src="/contact/github-logo.png"
-						height={160}
-						width={160}
-						alt="Logo of Linkedin"
-					/>
-				</div>
-			</Tile>
-			<Tile customClassName="col-span-4 md:col-span-1 cursor-pointer">
-				<div className="h-full w-full flex items-center justify-center">
-					<Image
-						src="/contact/linkedin-logo.png"
-						height={160}
-						width={160}
-						alt="Logo of Linkedin"
-						className=""
-					/>
-				</div>
-			</Tile>
+			</div>
 		</Section>
 	);
 }
