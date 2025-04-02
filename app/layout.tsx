@@ -8,9 +8,9 @@ const exo = Exo({
 });
 
 export const metadata: Metadata = {
-	title: "Calvin CHIFFOT's Portfolio",
+	title: "Calvin Chiffot's Portfolio",
 	description:
-		"Portfolio Calvin CHIFFOT Full-Stack NodeJS JavaScript TypeScript Dev"
+		"Portfolio Calvin Chiffot Full-Stack NodeJS JavaScript TypeScript Dev"
 };
 
 export default function RootLayout({

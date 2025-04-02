@@ -1,5 +1,5 @@
 export const generalData = {
-	name: "Calvin CHIFFOT",
+	name: "Calvin Chiffot",
 	title: { en: "Me", fr: "Moi" },
 	me: { en: " years old, French", fr: " ans, Français" },
 	description: [
