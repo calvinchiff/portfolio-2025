@@ -9,7 +9,7 @@ export default function ContactSection() {
 	const { language } = useLanguage();
 
 	const handleEmailClick = () => {
-		if (window.getSelection().toString()) {
+		if (window.getSelection()?.toString()) {
 			return;
 		}
 		window.location.href = `mailto:${contactData.emailPart1}@${contactData.emailPart2}.${contactData.emailPart3}`;
