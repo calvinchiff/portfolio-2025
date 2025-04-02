@@ -8,7 +8,10 @@ import { useLanguage } from "@/app/components/lib/LanguageContext";
 export default function ContactSection() {
 	const { language } = useLanguage();
 
-	const handleEmailClick = () => {
+	const handleEmailClick = (event) => {
+		if (window.getSelection().toString()) {
+			return;
+		}
 		window.location.href = "mailto:calvinchiffot@protonmail.com";
 	};
 
@@ -20,8 +23,13 @@ export default function ContactSection() {
 					onClick={handleEmailClick}
 				>
 					<div className="h-full gap-4 flex flex-col text-center items-center justify-center font-semibold">
-						<span>{contactData.text1[language]}</span>
-						<span>{contactData.text2[language]}</span>
+						<span className="text-base md:text-lg lg:text-xl">
+							{contactData.text1[language]}
+						</span>
+						<span className="text-base md:text-lg lg:text-xl">
+							{contactData.text2[language]}{" "}
+							<span className="font-bold">{contactData.email}</span>
+						</span>
 					</div>
 				</Tile>
 				<div className="flex flex-row basis-1/2 gap-2">
