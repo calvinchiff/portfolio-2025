@@ -11,8 +11,6 @@ export default function SkillsSection() {
 	const { language } = useLanguage();
 	const [active, setActive] = useState("technicalSkills");
 
-	type Skill = (typeof skillsData)[2]["skills"][0];
-
 	const reorderedTiles = [...skillsData].sort((a, b) =>
 		a.id === active ? -1 : b.id === active ? 1 : 0
 	);
