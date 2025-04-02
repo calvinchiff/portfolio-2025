@@ -11,7 +11,7 @@ export default function SkillsSection() {
 	const { language } = useLanguage();
 	const [active, setActive] = useState("technicalSkills");
 
-	// Définition des tuiles
+	type Skill = (typeof skillsData)[2]["skills"][0];
 
 	const reorderedTiles = [...skillsData].sort((a, b) =>
 		a.id === active ? -1 : b.id === active ? 1 : 0
@@ -75,19 +75,21 @@ export default function SkillsSection() {
 												</p>
 											)}
 										</div>
-										{active === "bonusSkills" && skill.subList && (
-											<ul className="md:mt-2 pl-6 space-y-1 text-sm">
-												{skill.subList.map((sub) => (
-													<li
-														key={sub.name[language]}
-														className="flex items-center"
-													>
-														<span className="mr-2">{sub.icon}</span>{" "}
-														{sub.name[language]}
-													</li>
-												))}
-											</ul>
-										)}
+										{active === "bonusSkills" &&
+											"subList" in skill &&
+											skill.subList && (
+												<ul className="md:mt-2 pl-6 space-y-1 text-sm">
+													{skill.subList.map((sub) => (
+														<li
+															key={sub.name[language]}
+															className="flex items-center"
+														>
+															<span className="mr-2">{sub.icon}</span>{" "}
+															{sub.name[language]}
+														</li>
+													))}
+												</ul>
+											)}
 									</div>
 								))}
 							</div>

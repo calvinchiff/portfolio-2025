@@ -16,6 +16,8 @@ export default function ProjectsSection() {
 
 	const currentProjects = projectsData.projects[activeCategory];
 
+	type ProjectEntry = (typeof projectsData.projects.dev)[0];
+
 	useEffect(() => {
 		setProjectIndex(0);
 	}, [activeCategory]);
@@ -78,7 +80,10 @@ export default function ProjectsSection() {
 							<div className="flex flex-col gap-1 md:gap-2 md:mt-2 p-2 md:p-4">
 								{Object.entries(projectsData.contentTitles).map(
 									([key, label]) => {
-										const value = currentProjects[projectIndex]?.[key];
+										const value =
+											currentProjects[projectIndex]?.[
+												key as keyof ProjectEntry
+											];
 
 										if (
 											!value ||
@@ -92,7 +97,9 @@ export default function ProjectsSection() {
 												<span className="font-semibold">
 													{label[language]} :
 													<span className="opacity-60 ml-2">
-														{value[language] || value}
+														{typeof value === "object"
+															? value[language]
+															: value}
 													</span>
 												</span>
 											</div>
