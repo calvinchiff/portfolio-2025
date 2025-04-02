@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Tile from "@/app/components/ui/Tile";
 import GeneralGrid from "@/app/components/sections/GeneralSection";
 import SkillsGrid from "@/app/components/sections/SkillsSection";
 import ContactGrid from "@/app/components/sections/ContactSection";
@@ -16,16 +15,17 @@ export default function Home() {
 			<main className="font-[family-name:var(--font-exo)] text-white flex flex-col gap-2 h-[100dvh] snap-y snap-mandatory transition duration-150 overflow-y-scroll z-0 scroll-smooth">
 				<Header />
 
-				<div className="fixed top-0 left-0 w-full h-full min-h-full -z-10">
-					<Image
-						src="/background.png"
-						alt="Background Image"
-						width={10000}
-						height={10000}
-						quality={100}
-						objectPosition="center"
-						priority
-					/>
+				<div className="fixed top-0 left-0 w-full h-full -z-10">
+					<div className="fixed top-0 left-0 w-full h-full -z-10">
+						<Image
+							src="/background.png"
+							alt="Background Image"
+							fill
+							sizes="100%"
+							quality={100}
+							style={{ objectFit: "cover", objectPosition: "center" }}
+						/>
+					</div>
 				</div>
 				<div className="min-h-[40vh]"></div>
 				<GeneralGrid />

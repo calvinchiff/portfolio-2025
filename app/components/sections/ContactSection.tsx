@@ -8,7 +8,7 @@ import { useLanguage } from "@/app/components/lib/LanguageContext";
 export default function ContactSection() {
 	const { language } = useLanguage();
 
-	const handleEmailClick = (event) => {
+	const handleEmailClick = () => {
 		if (window.getSelection().toString()) {
 			return;
 		}
@@ -46,10 +46,11 @@ export default function ContactSection() {
 								)
 							}
 						>
-							<div className="h-full w-full flex items-center justify-center">
+							<div className="relative h-full w-full flex items-center justify-center">
 								<Image
 									src="/contact/linkedin-logo.png"
-									objectFit="contain"
+									sizes="100%"
+									style={{ objectFit: "contain" }}
 									fill
 									alt="Logo of Linkedin"
 								/>
@@ -61,10 +62,11 @@ export default function ContactSection() {
 								window.open("https://github.com/calvinchiff", "_blank")
 							}
 						>
-							<div className="h-full w-full flex items-center justify-center">
+							<div className="relative h-full w-full flex items-center justify-center">
 								<Image
 									src="/contact/github-logo.png"
-									objectFit="contain"
+									sizes="100%"
+									style={{ objectFit: "contain" }}
 									fill
 									alt="Logo of Linkedin"
 								/>
@@ -81,10 +83,11 @@ export default function ContactSection() {
 								)
 							}
 						>
-							<div className="h-full w-full flex items-center justify-center">
+							<div className="relative h-full w-full flex items-center justify-center">
 								<Image
 									src="/contact/resume-logo.png"
-									objectFit="contain"
+									sizes="100%"
+									style={{ objectFit: "contain" }}
 									fill
 									alt="Logo of Resume"
 									className="invert brightness-200 rotate-45 scale-75 opacity-70"

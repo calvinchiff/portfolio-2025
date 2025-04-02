@@ -20,7 +20,7 @@ export default function SkillsSection() {
 	return (
 		<Section id="skills" nbLeftGridRows={1} nbRightGridRows={2}>
 			<div className="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 gap-2 h-full w-full">
-				{reorderedTiles.map((tile, index) => (
+				{reorderedTiles.map((tile) => (
 					<motion.div
 						key={tile.id}
 						layout
@@ -60,7 +60,8 @@ export default function SkillsSection() {
 													src={skill.icon}
 													alt={skill.name[language] + " icon"}
 													fill
-													objectFit="contain"
+													sizes="100%"
+													style={{ objectFit: "contain" }}
 													className={`transition-all duration-300 ${
 														active === tile.id
 															? "drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]"

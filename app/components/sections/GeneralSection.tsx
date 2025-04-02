@@ -43,7 +43,8 @@ export default function GeneralSection() {
 								alt="Avatar logo"
 								src="/general/Me_Logo.png"
 								fill
-								objectFit="contain"
+								sizes="100%"
+								style={{ objectFit: "contain" }}
 							/>
 						</div>
 						<div className="flex flex-col md:basis-2/3 self-center gap-3">

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import Tile from "@/app/components/ui/Tile";
 import Section from "@/app/components/ui/Section";
 import { careerData } from "@/public/data/careerData";

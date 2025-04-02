@@ -44,7 +44,8 @@ export default function Tile({
 						src={imageSrc}
 						alt={bottomRightCorner}
 						fill
-						objectFit="contain"
+						sizes="100%"
+						style={{ objectFit: "contain" }}
 					/>
 				</div>
 			)}

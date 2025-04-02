@@ -71,9 +71,10 @@ export default function Header() {
 							? "/header/Flag_UK_1.png"
 							: "/header/Flag_FR_1.png"
 					}
-					fill={true}
+					fill
+					sizes="100%"
+					style={{ objectFit: "contain" }}
 					alt="Language Toggle between EN/FR"
-					objectFit="contain"
 				/>
 			</button>
 		</header>

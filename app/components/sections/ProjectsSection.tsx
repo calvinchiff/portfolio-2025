@@ -46,7 +46,8 @@ export default function ProjectsSection() {
 						<Image
 							src="/projects/arrow.png"
 							alt="Previous"
-							objectFit="contain"
+							sizes="100%"
+							style={{ objectFit: "contain" }}
 							fill
 						/>
 					</button>
@@ -58,7 +59,8 @@ export default function ProjectsSection() {
 						<Image
 							src="/projects/arrow.png"
 							alt="Next"
-							objectFit="contain"
+							sizes="100%"
+							style={{ objectFit: "contain" }}
 							fill
 							className="transform rotate-180"
 						/>
@@ -76,7 +78,7 @@ export default function ProjectsSection() {
 							<div className="flex flex-col gap-1 md:gap-2 md:mt-2 p-2 md:p-4">
 								{Object.entries(projectsData.contentTitles).map(
 									([key, label]) => {
-										const value = (currentProjects[projectIndex] as any)?.[key];
+										const value = currentProjects[projectIndex]?.[key];
 
 										if (
 											!value ||
