@@ -4,7 +4,7 @@ import Image from "next/image";
 import Tile from "@/app/components/ui/Tile";
 import Section from "@/app/components/ui/Section";
 import { generalData } from "@/public/data/generalData";
-import { useLanguage } from "@/app/components/lib/LanguageContext";
+import { useLanguage } from "@/app/utils/LanguageContext";
 import LinkImageTile from "@/app/components/ui/LinkImageTile";
 
 export default function GeneralSection() {

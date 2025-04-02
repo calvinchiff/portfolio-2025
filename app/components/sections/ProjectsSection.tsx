@@ -3,7 +3,7 @@ import Image from "next/image";
 import Tile from "@/app/components/ui/Tile";
 import Section from "@/app/components/ui/Section";
 import { projectsData } from "@/public/data/projectsData";
-import { useLanguage } from "@/app/components/lib/LanguageContext";
+import { useLanguage } from "@/app/utils/LanguageContext";
 
 type Category = "dev" | "craft";
 

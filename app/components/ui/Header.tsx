@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { navbarData } from "@/public/data/navbarData";
 import React, { useEffect, useState } from "react";
-import { useLanguage } from "@/app/components/lib/LanguageContext";
+import { useLanguage } from "@/app/utils/LanguageContext";
 import BG from "@/app/components/ui/BG";
 import { handleScrollToId } from "@/app/utils/scroll";
 

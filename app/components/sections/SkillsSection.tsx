@@ -4,7 +4,7 @@ import Image from "next/image";
 import Section from "@/app/components/ui/Section";
 import { motion } from "framer-motion";
 import { skillsData } from "@/public/data/skillsData";
-import { useLanguage } from "@/app/components/lib/LanguageContext";
+import { useLanguage } from "@/app/utils/LanguageContext";
 import { Toggle } from "../ui/Toggle";
 
 export default function SkillsSection() {

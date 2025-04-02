@@ -7,7 +7,7 @@ import ContactGrid from "@/app/components/sections/ContactSection";
 import ProjectsGrid from "@/app/components/sections/ProjectsSection";
 import CareerGrid from "@/app/components/sections/CareerSection";
 import Header from "@/app/components/ui/Header";
-import { LanguageProvider } from "./components/lib/LanguageContext";
+import { LanguageProvider } from "./utils/LanguageContext";
 
 export default function Home() {
 	return (

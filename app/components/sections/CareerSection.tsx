@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Tile from "@/app/components/ui/Tile";
 import Section from "@/app/components/ui/Section";
 import { careerData } from "@/public/data/careerData";
-import { useLanguage } from "@/app/components/lib/LanguageContext";
+import { useLanguage } from "@/app/utils/LanguageContext";
 
 export default function CareerSection() {
 	const { language } = useLanguage();

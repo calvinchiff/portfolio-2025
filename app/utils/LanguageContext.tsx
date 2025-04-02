@@ -8,32 +8,35 @@ import {
 	useState
 } from "react";
 
+type Language = "en" | "fr";
+
 interface LanguageContextType {
-	language: "en" | "fr";
-	changeLanguage: (lang: string) => void;
+	language: Language;
+	changeLanguage: (lang: Language) => void;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(
-	undefined
-);
+const LanguageContext = createContext<LanguageContextType>({
+	language: "en",
+	changeLanguage: () => {}
+});
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-	const [language, setLanguage] = useState<string>("en");
+	const [language, setLanguage] = useState<Language>("en");
+
+	const changeLanguage = (lang: Language) => {
+		setLanguage(lang);
+		localStorage.setItem("language", lang);
+	};
 
 	useEffect(() => {
 		const storedLanguage = localStorage.getItem("language");
-		if (storedLanguage) {
+		if (storedLanguage === "en" || storedLanguage === "fr") {
 			setLanguage(storedLanguage);
 		} else {
 			const browserLanguage = navigator.language.startsWith("fr") ? "fr" : "en";
 			setLanguage(browserLanguage);
 		}
 	}, []);
-
-	const changeLanguage = (lang: string) => {
-		setLanguage(lang);
-		localStorage.setItem("language", lang);
-	};
 
 	return (
 		<LanguageContext.Provider value={{ language, changeLanguage }}>
