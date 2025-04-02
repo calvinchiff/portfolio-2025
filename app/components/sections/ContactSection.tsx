@@ -29,7 +29,7 @@ export default function ContactSection() {
 						<span className="text-base md:text-lg lg:text-xl">
 							{contactData.text2[language]}{" "}
 							<span className="font-bold text-base md:text-lg lg:text-xl text-glow">
-								{contactData.emailPart1}@${contactData.emailPart2}.$
+								{contactData.emailPart1}@{contactData.emailPart2}.
 								{contactData.emailPart3}
 							</span>
 						</span>
