@@ -22,13 +22,15 @@ export default function ContactSection() {
 					customClassName="basis-1/2 md:col-span-3 row-span-2 md:row-span-1 cursor-pointer"
 					onClick={handleEmailClick}
 				>
-					<div className="h-full gap-4 flex flex-col text-center items-center justify-center font-semibold">
+					<div className="h-full gap-4 flex flex-col text-center items-center justify-center font-semibold opacity-90">
 						<span className="text-base md:text-lg lg:text-xl">
 							{contactData.text1[language]}
 						</span>
 						<span className="text-base md:text-lg lg:text-xl">
 							{contactData.text2[language]}{" "}
-							<span className="font-bold">{contactData.email}</span>
+							<span className="font-bold text-base md:text-lg lg:text-xl text-glow">
+								{contactData.email}
+							</span>
 						</span>
 					</div>
 				</Tile>

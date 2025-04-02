@@ -24,7 +24,7 @@ body {
 
 @layer base {
 	h1 {
-		@apply text-center text-lg md:text-xl xl:text-2xl;
+		@apply text-center text-lg md:text-xl xl:text-2xl font-semibold;
 	}
 
 	h2 {
