@@ -4,7 +4,9 @@ export const contactData = {
 		en: "You can send me an email clicking here or send it to",
 		fr: "Vous pouvez m'envoyer un e-mail en cliquant ici ou à l'adresse"
 	},
-	email: "calvinchiffot@protonmail.com",
+	emailPart1: "calvinchiffot",
+	emailPart2: "protonmail",
+	emailPart3: "com",
 	linkedinLink: "linkedin.com",
 	githubLink: "github.com"
 };
