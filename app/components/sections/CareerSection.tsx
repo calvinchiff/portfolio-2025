@@ -6,6 +6,7 @@ import { useLanguage } from "@/app/utils/LanguageContext";
 
 export default function CareerSection() {
 	const { language } = useLanguage();
+	type CareerEntry = (typeof careerData.entries)[0]; // Infer type from the first entry
 	const [active, setActive] = useState(careerData.entries[0]);
 	const activeIndex = careerData.entries.findIndex(
 		(entry) => entry.id === active.id
@@ -119,7 +120,7 @@ export default function CareerSection() {
 					<div className="flex flex-col md:gap-2 md:mt-2">
 						{Object.entries(careerData.tiles.details.contentTitles).map(
 							([key, label]) => {
-								const value = active[key];
+								const value = active[key as keyof CareerEntry]; // Use the inferred type
 
 								if (!value || (typeof value === "object" && !value[language])) {
 									return null;
@@ -130,7 +131,7 @@ export default function CareerSection() {
 										<span className="font-semibold">
 											{label[language]} :
 											<span className="opacity-60 ml-2">
-												{value[language] || value}
+												{typeof value === "object" ? value[language] : value}
 											</span>
 										</span>
 									</div>
