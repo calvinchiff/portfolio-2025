@@ -68,8 +68,8 @@ export default function SkillsSection() {
 												/>
 											</div>
 											{active === tile.id && (
-												<p className="ml-2 self-center">
-													<strong>{skill.name[language]}</strong>
+												<p className="ml-2 self-center font-semibold">
+													{skill.name[language]}
 												</p>
 											)}
 										</div>
