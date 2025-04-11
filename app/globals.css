@@ -28,13 +28,13 @@ body {
 	}
 
 	h2 {
-		@apply font-bold text-base md:text-lg xl:text-xl;
+		@apply font-semibold text-base md:text-lg xl:text-xl;
 	}
 
 	p,
 	li,
 	span {
-		@apply text-sm md:text-base xl:text-lg;
+		@apply text-sm md:text-base xl:text-lg font-semibold;
 	}
 
 	img {

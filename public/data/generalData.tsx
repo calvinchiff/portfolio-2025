@@ -5,30 +5,35 @@ export const generalData = {
 	description: [
 		{
 			id: 0,
+			title: {
+				en: "passions",
+				fr: "passions"
+			},
 			text: {
-				en: "passions: [dev, tech, automotive]",
-				fr: "passions : [développement, technologie, automobile]"
+				en: "dev, tech, engineering, automotive, robotics",
+				fr: "développement, technologie, ingénierie, automobile, robotique"
 			}
 		},
 		{
 			id: 1,
+			title: {
+				en: "also",
+				fr: "aussi"
+			},
 			text: {
-				en: "also: [love learning, exploring various fields, AI, MLOps, robotics, Edge AI/Computing]",
-				fr: "aussi : [j'aime apprendre, explorer divers domaines, IA, MLOps, robotique, Edge AI/Computing]"
+				en: "love learning, exploring various fields, AI, MLOps, robotics, Edge AI/Computing",
+				fr: "j'aime apprendre, explorer divers domaines, IA, MLOps, robotique, Edge AI/Computing"
 			}
 		},
 		{
 			id: 2,
+			title: {
+				en: "creativity",
+				fr: "créativité"
+			},
 			text: {
-				en: "creativity: [enjoy imagining, sketching, and 3D modeling inventions involving embedded systems (STM32) or woodworking]",
-				fr: "créativité : [j'aime imaginer, dessiner et modéliser en 3D des inventions impliquant des systèmes embarqués (STM32) ou le travail du bois]"
-			}
-		},
-		{
-			id: 3,
-			text: {
-				en: "basically love humans engineering and creations (mechanical, hardware, robotics...)",
-				fr: "j'aime tout ce qui touche à l'ingénieurie et la créativité de l'Homme (mécanique, hardware, robotique...)"
+				en: "creativity: inventions, 3D modeling embedded systems (STM32), woodworking",
+				fr: "créativité : inventions, modélisation 3D, systèmes embarqués (STM32), travail du bois"
 			}
 		}
 	],

@@ -11,7 +11,10 @@ export default function GeneralSection() {
 	const { language } = useLanguage();
 
 	const listDescription = generalData.description.map((line) => (
-		<li key={line.id}>{line.text[language]}</li>
+		<li key={line.id}>
+			{line.title[language]} :
+			<span className="opacity-60 ml-2">{line.text[language]}</span>
+		</li>
 	));
 
 	const birthDate = new Date("2001-03-30");
@@ -50,9 +53,7 @@ export default function GeneralSection() {
 						<div className="flex flex-col md:basis-2/3 self-center gap-3">
 							<div className="flex flex-row gap-4">
 								<h2>{generalData.name}</h2>
-								<h2 className="font-normal">
-									{age + generalData.me[language]}
-								</h2>
+								<h2 className="opacity-60">{age + generalData.me[language]}</h2>
 							</div>
 							<ul className="flex flex-col gap-2">{listDescription}</ul>
 						</div>
