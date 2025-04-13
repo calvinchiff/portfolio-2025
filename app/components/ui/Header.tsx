@@ -4,7 +4,7 @@ import Image from "next/image";
 import { navbarData } from "@/public/data/navbarData";
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "@/app/utils/LanguageContext";
-import BG from "@/app/components/ui/BG";
+import BG from "@/app/components/ui/BGTile";
 import { handleScrollToId } from "@/app/utils/scroll";
 
 export default function Header() {

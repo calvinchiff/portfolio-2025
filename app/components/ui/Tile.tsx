@@ -1,5 +1,5 @@
 import React from "react";
-import BG from "@/app/components/ui/BG";
+import BG from "@/app/components/ui/BGTile";
 import Image from "next/image";
 
 interface TileProps {
