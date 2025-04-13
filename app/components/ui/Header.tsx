@@ -4,7 +4,7 @@ import Image from "next/image";
 import { navbarData } from "@/public/data/navbarData";
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "@/app/utils/LanguageContext";
-import BG from "@/app/components/ui/BGTile";
+import BGTile from "@/app/components/ui/BGTile";
 import { handleScrollToId } from "@/app/utils/scroll";
 
 export default function Header() {
@@ -55,8 +55,8 @@ export default function Header() {
 
 	return (
 		<header className="fixed flex items-center justify-center w-full bottom-5 md:bottom-auto md:top-[4dvh] left-0 z-50">
-			<nav className="inline-flex max-w-[98vw] backdrop-blur-sm rounded-[35px] shadow-xl p-3.5 md:p-4">
-				<BG />
+			<nav className="inline-flex max-w-[98vw] backdrop-blur-md rounded-[35px] shadow-xl p-3.5 md:p-4">
+				<BGTile />
 				<ul className="relative flex mx-auto md:mx-3 gap-1.5 md:gap-4 text-base md:text-lg xl:text-2xl">
 					{listNavbar}
 				</ul>

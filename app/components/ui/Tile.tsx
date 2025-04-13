@@ -1,5 +1,5 @@
 import React from "react";
-import BG from "@/app/components/ui/BGTile";
+import BGTile from "@/app/components/ui/BGTile";
 import Image from "next/image";
 
 interface TileProps {
@@ -22,11 +22,11 @@ export default function Tile({
 
 	return (
 		<div
-			className={`relative rounded-[35px] backdrop-blur-md p-3 md:p-5 w-full h-full group ${customClassName}`}
+			className={`relative rounded-[35px] backdrop-blur-xl p-3 md:p-5 w-full h-full group ${customClassName}`}
 			onClick={onClick}
 		>
 			{/* Background layer */}
-			<BG />
+			<BGTile />
 			{/* Content layer */}
 			<div className="relative opacity-90 flex flex-col h-full">
 				{title && <h1>{title}</h1>}
