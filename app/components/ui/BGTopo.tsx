@@ -7,7 +7,7 @@ import * as THREE from "three";
 
 export default function BGTopo() {
 	const containerRef = useRef<HTMLDivElement>(null);
-	const rendererRef = useRef<THREE.WebGLRenderer>();
+	const rendererRef = useRef<THREE.WebGLRenderer | undefined>(undefined);
 
 	useEffect(() => {
 		const container = containerRef.current;
