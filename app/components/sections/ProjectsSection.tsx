@@ -77,7 +77,7 @@ export default function ProjectsSection() {
 						customClassName=""
 					>
 						{currentProjects[projectIndex] && (
-							<div className="flex flex-col h-full md:mt-2 px-2 py-8 md:py-16 md:px-8 justify-between">
+							<div className="flex flex-col h-full md:mt-2 px-2 py-8 md:pt-12 md:px-8 justify-between">
 								{Object.entries(projectsData.contentTitles).map(
 									([key, label]) => {
 										const value =

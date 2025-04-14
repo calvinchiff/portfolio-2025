@@ -17,8 +17,8 @@ export const projectsData = {
 				},
 				link: "",
 				date: "03-2025",
-				techno: "Next.js, Tailwind CSS, Vercel",
-				state: { en: "In progress", fr: "En cours" }
+				techno: "Next.js, Tailwind CSS, Vercel, ThreeJS",
+				state: { en: "Done", fr: "Terminé" }
 			},
 			{
 				id: "2",
