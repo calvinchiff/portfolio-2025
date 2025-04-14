@@ -13,8 +13,7 @@ const exo = Exo({
 
 export const metadata: Metadata = {
 	title: "Calvin Chiffot - Portfolio",
-	description:
-		"Portfolio Calvin Chiffot Full-Stack NodeJS JavaScript TypeScript Dev",
+	description: "Portfolio Calvin Chiffot Full-Stack Dev",
 	icons: {
 		icon: [
 			{ url: "/favicon_io/favicon.ico" },
