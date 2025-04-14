@@ -4,7 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import BGTopo from "@/app/components/ui/BGTopo";
-import CRTFilter from "./components/ui/CRTFilter";
+// import CRTFilter from "@/app/components/ui/CRTFilter";
 
 const exo = Exo({
 	variable: "--font-exo",

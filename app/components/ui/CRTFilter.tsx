@@ -1,5 +1,8 @@
 "use client";
-export default function CRTFilter({ children }) {
+
+import { ReactNode } from "react";
+
+export default function CRTFilter({ children }: { children: ReactNode }) {
 	return (
 		<div className="crt-container relative overflow-hidden">
 			<div className="crt-screen">{children}</div>
