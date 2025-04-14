@@ -46,7 +46,7 @@ export default function Header() {
 			className={`cursor-pointer hover:font-bold transition-all ${
 				activeSection === x.id
 					? "text-white/90 font-bold text-glow"
-					: "text-gray-500"
+					: "text-white/30"
 			}`}
 		>
 			{x.title[language]}
