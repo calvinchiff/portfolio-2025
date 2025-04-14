@@ -2,9 +2,9 @@
 module.exports = {
     siteUrl: 'https://calvinchiff.com',
     generateRobotsTxt: true,
-    sitemapSize: 7000,
+    sitemapSize: 50000,
     changefreq: 'monthly',
-    priority: 0.7,
+    priority: 1,
     trailingSlash: false,
     additionalPaths: async (config) => [
         await config.transform(config, '/'),
