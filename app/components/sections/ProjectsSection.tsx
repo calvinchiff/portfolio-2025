@@ -43,7 +43,7 @@ export default function ProjectsSection() {
 				<div className="relative h-full">
 					<button
 						onClick={handlePrevious}
-						className="w-10 h-10 md:w-20 md:h-20 absolute z-50 left-2 md:-left-18 top-1/2 -translate-y-1/2 p-2 cursor-pointer transition-transform duration-200 hover:-translate-x-2 opacity-70 hover:opacity-100"
+						className="w-10 h-10 md:w-20 md:h-20 absolute z-10 left-2 md:-left-18 top-1/2 -translate-y-1/2 p-2 cursor-pointer transition-transform duration-200 hover:-translate-x-2 opacity-70 hover:opacity-100"
 					>
 						<Image
 							src="/projects/arrow.png"
@@ -56,7 +56,7 @@ export default function ProjectsSection() {
 
 					<button
 						onClick={handleNext}
-						className="w-10 h-10 md:w-20 md:h-20 absolute z-50 right-2 md:-right-18 top-1/2 -translate-y-1/2 p-2 cursor-pointer transition-transform duration-200 hover:translate-x-2 opacity-70 hover:opacity-100"
+						className="w-10 h-10 md:w-20 md:h-20 absolute z-10 right-2 md:-right-18 top-1/2 -translate-y-1/2 p-2 cursor-pointer transition-transform duration-200 hover:translate-x-2 opacity-70 hover:opacity-100"
 					>
 						<Image
 							src="/projects/arrow.png"
