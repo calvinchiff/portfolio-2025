@@ -63,7 +63,7 @@ export default function Header() {
 			</nav>
 			<button
 				onClick={() => changeLanguage(language === "en" ? "fr" : "en")}
-				className="fixed top-10 md:top-[4dvh] right-[10dvw] h-10 md:h-15 w-10 md:w-15 overflow-hidden rounded-full cursor-pointer shadow-xl hover:shadow-white hover:shadow-xs"
+				className="fixed top-10 md:top-[4dvh] right-[10dvw] h-10 md:h-15 w-10 md:w-15 overflow-hidden rounded-full cursor-pointer shadow-xl hover:shadow-white/20 hover:shadow-xl transition-all duration-150"
 			>
 				<Image
 					src={
@@ -76,6 +76,7 @@ export default function Header() {
 					style={{ objectFit: "contain" }}
 					alt="Language Toggle between EN/FR"
 				/>
+				<div className="pointer-events-none absolute inset-0 rounded-full shadow-[inset_0_2px_0_rgba(255,255,255,0.1),inset_0_0_10px_rgba(255,255,255,0.2)] z-10" />
 			</button>
 		</header>
 	);
