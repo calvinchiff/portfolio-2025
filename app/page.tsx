@@ -19,8 +19,10 @@ export default function Home() {
 				<CareerGrid />
 				<ProjectsGrid />
 				<ContactGrid />
+				<footer className="text-center text-sm text-white/50 md:py-8">
+					© {new Date().getFullYear()} Calvin Chiffot. All rights reserved.
+				</footer>
 				<div className="min-h-[40vh]"></div>
-				<footer></footer>
 			</main>
 		</LanguageProvider>
 	);
