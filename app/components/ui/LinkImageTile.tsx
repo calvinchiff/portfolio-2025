@@ -13,7 +13,7 @@ export default function LinkImageTile({
 			title=""
 			customClassName="cursor-pointer hover:text-glow hover:font-bold transition-all duration-150"
 			onClick={() => handleScrollToId(sectionLink)}
-			bottomRightCorner="arrow"
+			bottomRightCorner=""
 		>
 			<div className="h-full flex flex-col gap-2">
 				<h1>{title}</h1>
