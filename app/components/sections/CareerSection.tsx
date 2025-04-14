@@ -117,7 +117,7 @@ export default function CareerSection() {
 					title={careerData.tiles.details.name[language]}
 					customClassName=""
 				>
-					<div className="flex flex-col md:gap-2 md:mt-2">
+					<div className="flex flex-col md:gap-2 md:mt-2 h-full justify-between py-2">
 						{Object.entries(careerData.tiles.details.contentTitles).map(
 							([key, label]) => {
 								const value = active[key as keyof CareerEntry]; // Use the inferred type
@@ -128,9 +128,9 @@ export default function CareerSection() {
 
 								return (
 									<div key={key} className="flex gap-2">
-										<span className="font-semibold">
+										<span className="font-semibold text-xs md:text-base xl:text-lg transition-all duration-150">
 											{label[language]} :
-											<span className="opacity-60 ml-2">
+											<span className="opacity-60 ml-2 text-xs md:text-base xl:text-lg transition-all duration-150">
 												{typeof value === "object" ? value[language] : value}
 											</span>
 										</span>
