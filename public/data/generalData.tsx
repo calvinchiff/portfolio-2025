@@ -32,8 +32,8 @@ export const generalData = {
 				fr: "créativité"
 			},
 			text: {
-				en: "inventions, 3D modeling embedded systems (STM32), woodworking",
-				fr: "inventions, modélisation 3D, systèmes embarqués (STM32), travail du bois"
+				en: "tinkering, 3D modeling embedded systems (STM32), woodworking",
+				fr: "tinkering, modélisation 3D, systèmes embarqués (STM32), travail du bois"
 			}
 		}
 	],

@@ -12,7 +12,7 @@ export const projectsData = {
 				id: "1",
 				title: { en: "Portfolio", fr: "Portfolio" },
 				description: {
-					en: "It's the portfolio you are watching rn !",
+					en: "It's the portfolio you are watching right now !",
 					fr: "C'est le portfolio que vous regardez en ce moment même !"
 				},
 				link: "",
