@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 	description: "Portfolio Calvin Chiffot Full-Stack Dev",
 	icons: {
 		icon: [
-			{ url: "/favicon_io/favicon.ico" },
+			{ url: "/favicon.ico" },
 			{
 				url: "/favicon_io/favicon-16x16.png",
 				sizes: "16x16",
