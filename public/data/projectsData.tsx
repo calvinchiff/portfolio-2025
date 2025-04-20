@@ -17,7 +17,7 @@ export const projectsData = {
 				},
 				link: "",
 				date: "03-2025",
-				techno: "Next.js, Tailwind CSS, Vercel, ThreeJS",
+				techno: "Next.js, Tailwind CSS, Vercel, ThreeJS, Figma",
 				state: { en: "Done", fr: "Terminé" }
 			},
 			{
@@ -29,7 +29,8 @@ export const projectsData = {
 				},
 				link: "",
 				date: "04-2025",
-				techno: "Next.js, Socket.io, Tailwind CSS, Redis",
+				techno:
+					"Next.js, Socket.io, Tailwind CSS, Redis, Figma, PostgreSQL, Docker, GitHub Actions",
 				state: { en: "In progress", fr: "En cours" }
 			},
 			{
