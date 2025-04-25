@@ -41,7 +41,7 @@ export default function GeneralSection() {
 				{/* General Tile */}
 				<Tile>
 					<div className="flex flex-col md:flex-row h-full justify-center">
-						<div className="md:basis-1/3 relative">
+						<div className="basis-1/3 relative">
 							<Image
 								alt="Avatar logo"
 								src="/general/Me_Logo.png"
@@ -51,7 +51,7 @@ export default function GeneralSection() {
 							/>
 						</div>
 						<div className="flex flex-col md:basis-2/3 self-center gap-3">
-							<div className="flex flex-row gap-4">
+							<div className="self-center md:self-start flex md:flex-row gap-4">
 								<h2>{generalData.name}</h2>
 								<h2 className="opacity-60">{age + generalData.me[language]}</h2>
 							</div>
