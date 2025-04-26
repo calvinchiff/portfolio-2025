@@ -1,6 +1,10 @@
 export const handleScrollToId = (id: string) => {
 	const element = document.getElementById(id);
-	if (element) {
-		element.scrollIntoView({ behavior: "smooth" });
+	const main = document.querySelector("main");
+	if (element && main) {
+		main.scrollTo({
+			top: element.offsetTop,
+			behavior: "smooth"
+		});
 	}
 };
