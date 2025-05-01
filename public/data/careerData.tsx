@@ -28,7 +28,7 @@ export const careerData = {
 			company: "",
 			description: {
 				en: "That's where I learned the basics in CS and completed my first projects.",
-				fr: "C'est là que j'ai pu apprendre les bases en informatique et réalisé mes premiers projets."
+				fr: "C'est là que j'ai pu apprendre les bases en informatique et réaliser mes premiers projets."
 			},
 			school: "IUT Vannes",
 			location: "Vannes, France",
