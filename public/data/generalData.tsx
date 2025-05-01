@@ -6,7 +6,7 @@ export const generalData = {
 		{
 			id: 0,
 			title: {
-				en: "passions",
+				en: "interests",
 				fr: "passions"
 			},
 			text: {
