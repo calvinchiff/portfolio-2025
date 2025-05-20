@@ -30,7 +30,7 @@ export const projectsData = {
 				link: "",
 				date: "04-2025",
 				techno:
-					"Next.js, Socket.io, Tailwind CSS, Redis, Figma, PostgreSQL, Docker, GitHub Actions",
+					"Next.js, TypeScript, Tailwind CSS, Socket.io, Figma, Express, PostgreSQL, Prisma, Jest, Docker, GitHub Actions",
 				state: { en: "In progress", fr: "En cours" }
 			},
 			{
