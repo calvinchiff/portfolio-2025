@@ -6,7 +6,8 @@ import ContactGrid from "@/app/components/sections/ContactSection";
 import ProjectsGrid from "@/app/components/sections/ProjectsSection";
 import CareerGrid from "@/app/components/sections/CareerSection";
 import Header from "@/app/components/ui/Header";
-import { LanguageProvider } from "./utils/LanguageContext";
+import Footer from "@/app/components/ui/Footer";
+import { LanguageProvider } from "@/app/utils/LanguageContext";
 
 export default function Home() {
 	return (
@@ -19,9 +20,7 @@ export default function Home() {
 				<CareerGrid />
 				<ProjectsGrid />
 				<ContactGrid />
-				<footer className="text-center text-sm text-white/50 md:py-8">
-					© {new Date().getFullYear()} Calvin Chiffot. All rights reserved.
-				</footer>
+				<Footer />
 				<div className="min-h-[40vh]"></div>
 			</main>
 		</LanguageProvider>
