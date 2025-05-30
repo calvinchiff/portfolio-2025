@@ -133,7 +133,8 @@ export const skillsData = [
 					{ name: { en: "3D Modelling", fr: "Modélisation 3D" }, icon: "📐" },
 					{ name: { en: "Woodworking", fr: "Travail du bois" }, icon: "🪵" },
 					{ name: { en: "Embedded/IoT", fr: "Embarqué/IoT" }, icon: "🎛️" },
-					{ name: { en: "Robotics", fr: "Robotique" }, icon: "🦾" }
+					{ name: { en: "Robotics", fr: "Robotique" }, icon: "🦾" },
+					{ name: { en: "Guitar", fr: "Guitare" }, icon: "🎸" }
 				]
 			},
 			{
