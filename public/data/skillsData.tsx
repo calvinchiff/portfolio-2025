@@ -123,8 +123,7 @@ export const skillsData = [
 						name: { en: "Motorcycle", fr: "Moto" },
 						icon: "🏍️"
 					},
-					{ name: { en: "Ski", fr: "Ski" }, icon: "🎿" },
-					{ name: { en: "Martial Arts", fr: "Arts martiaux" }, icon: "🥋" }
+					{ name: { en: "Ski", fr: "Ski" }, icon: "🎿" }
 				]
 			},
 			{
