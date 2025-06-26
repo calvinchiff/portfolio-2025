@@ -16,7 +16,7 @@ export default function LinkImageTile({
 			bottomRightCorner=""
 		>
 			<div className="h-full flex flex-col gap-2">
-				<h1 className="text-sm md:text-xl lg:text-2xl">{title}</h1>
+				<h1 className="text-sm md:text-xl xl:text-2xl">{title}</h1>
 				<div className="relative h-full">
 					<Image
 						alt={sectionLink + " logo"}
