@@ -49,7 +49,7 @@ export default function Section({
 }: SectionProps) {
 	return (
 		<section id={id} className="snap-center">
-			<div className="overflow-hidden flex justify-center items-center w-full h-[65vh] gap-2">
+			<div className="overflow-hidden flex justify-center items-center w-full md:min-h-[500px] xl:min-h-[525px] h-[65vh] max-h-[600px] gap-2">
 				{/* Left invis grid */}
 				{renderInvisGrid("left", nbLeftGridRows)}
 				<div
