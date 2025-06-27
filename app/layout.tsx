@@ -4,6 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import BGTopo from "@/app/components/ui/BGTopo";
+import { ScrollProvider } from "@/app/utils/ScrollContext";
 // import CRTFilter from "@/app/components/ui/CRTFilter";
 
 const exo = Exo({
@@ -53,7 +54,7 @@ export default function RootLayout({
 		<html lang="en" className="scroll-smooth">
 			<body className={`${exo.variable} antialiased`}>
 				{/* <CRTFilter> */}
-				{children}
+				<ScrollProvider>{children}</ScrollProvider>
 				<BGTopo />
 				<Analytics />
 				<SpeedInsights />

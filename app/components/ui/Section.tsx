@@ -1,4 +1,5 @@
 import React from "react";
+import { useScrollContext } from "@/app/utils/ScrollContext";
 
 type SectionProps = {
 	customGridClassName?: string;
@@ -8,11 +9,9 @@ type SectionProps = {
 	nbRightGridRows?: 0 | 1 | 2;
 };
 
-const isCentered = true;
-
 const InvisGridStyle = "blur-[1px]";
-const InvisTileStyle =
-	"mask-gradient bg-[#2b2b2b2b] opacity-100 border-2 border-white";
+// const InvisTileStyle = "mask-gradient bg-[#2b2b2b2b] opacity-100 \border-white";
+const InvisTileStyle = "opacity-60 transition-all";
 
 const renderInvisGrid = (position: "left" | "right", nbGridRows = 0) => {
 	const maskTop = position === "left" ? "mask-top-left" : "mask-top-right";
@@ -47,6 +46,8 @@ export default function Section({
 	nbLeftGridRows = 0,
 	nbRightGridRows = 0
 }: SectionProps) {
+	const { activeSection } = useScrollContext();
+	const isActive = activeSection === id;
 	return (
 		<section id={id} className="snap-center">
 			<div className="overflow-hidden flex justify-center items-center w-full md:min-h-[500px] xl:min-h-[525px] h-[65vh] max-h-[600px] gap-2">
@@ -54,7 +55,7 @@ export default function Section({
 				{renderInvisGrid("left", nbLeftGridRows)}
 				<div
 					className={`gap-2 h-full max-w-[90vw] aspect-[3/2] ${customGridClassName} ${
-						isCentered ? "" : InvisTileStyle + "mask-bottom"
+						isActive ? "" : InvisTileStyle + " mask-bottom"
 					}`}
 				>
 					{children}
