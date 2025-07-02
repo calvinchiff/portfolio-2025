@@ -11,7 +11,7 @@ type SectionProps = {
 
 const InvisGridStyle = "blur-[1px]";
 // const InvisTileStyle = "mask-gradient bg-[#2b2b2b2b] opacity-100 \border-white";
-const InvisTileStyle = "opacity-60 transition-all";
+const InvisTileStyle = "transition-all";
 
 const renderInvisGrid = (position: "left" | "right", nbGridRows = 0) => {
 	const maskTop = position === "left" ? "mask-top-left" : "mask-top-right";
@@ -55,7 +55,8 @@ export default function Section({
 				{renderInvisGrid("left", nbLeftGridRows)}
 				<div
 					className={`gap-2 h-full max-w-[90vw] aspect-[3/2] ${customGridClassName} ${
-						isActive ? "" : InvisTileStyle + " mask-bottom"
+						isActive ? "opacity-90 " : "blur-[2px] brightness-90 opacity-50"
+					} transition-all duration-300 ease-in-out
 					}`}
 				>
 					{children}
