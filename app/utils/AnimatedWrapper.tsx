@@ -23,15 +23,16 @@ const CHARS = "!<>-_\\/[]{}—=+*^?#________";
 
 /** Scramble letters until the final text is revealed */
 const scrambleText = (el: HTMLElement, duration = 700) => {
-	// only touch plain-text elements – no children allowed
 	if (el.children.length !== 0) return;
 
 	const finalText = el.textContent ?? "";
-	if (!finalText.trim()) return; // ignore empty strings
-	if (el.dataset.scrambling === "1") return; // already running
+	if (!finalText.trim()) return;
+	if (el.dataset.scrambling === "1") return;
 
 	el.dataset.scrambling = "1";
-	const iterations = 14; // how many redraws
+
+	// 🔧 dynamic iterations based on duration (~60fps)
+	const iterations = Math.max(8, Math.round((duration / 1000) * 60));
 	let frame = 0;
 
 	const step = () => {
@@ -50,7 +51,7 @@ const scrambleText = (el: HTMLElement, duration = 700) => {
 		if (frame++ < iterations) {
 			requestAnimationFrame(step);
 		} else {
-			el.textContent = finalText; // restore real text
+			el.textContent = finalText;
 			delete el.dataset.scrambling;
 		}
 	};
@@ -60,7 +61,7 @@ const scrambleText = (el: HTMLElement, duration = 700) => {
 
 export default function AnimatedWrapper({
 	children,
-	animationClass = "fade-in-text", // your existing fade class
+	animationClass = "fade-in-text",
 	className = ""
 }: {
 	children: React.ReactNode;
@@ -73,24 +74,21 @@ export default function AnimatedWrapper({
 		const root = ref.current;
 		if (!root) return;
 
-		/** Trigger both fade-in and scramble on a node */
 		const animate = (node: Node) => {
 			if (!(node instanceof HTMLElement)) return;
 			if (!TEXT_TAGS.includes(node.tagName)) return;
 
 			node.classList.remove(animationClass);
-			void node.offsetWidth; // force reflow
+			void node.offsetWidth;
 			node.classList.add(animationClass);
 
-			scrambleText(node);
+			scrambleText(node, 700); // 🔧 use the hardcoded duration
 		};
 
 		const observer = new MutationObserver((mutations) => {
 			mutations.forEach((mutation) => {
-				// new nodes (React replaced element)
 				mutation.addedNodes.forEach(animate);
 
-				// direct text edits (React edited existing text node)
 				if (
 					mutation.type === "characterData" &&
 					mutation.target.parentElement &&
