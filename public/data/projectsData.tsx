@@ -31,7 +31,10 @@ export const projectsData = {
 				date: "04-2025",
 				techno:
 					"Next.js, TypeScript, Tailwind CSS, Socket.io, Figma, Express, PostgreSQL, Prisma, Jest, Docker, GitHub Actions",
-				state: { en: "In progress", fr: "En cours" }
+				state: {
+					en: "On hold – API access unavailable",
+					fr: "Suspendu – Pas d’accès à l’API Letterboxd"
+				}
 			},
 			{
 				id: "3",
@@ -51,8 +54,8 @@ export const projectsData = {
 				id: "1",
 				title: { en: "Water level sensor", fr: "Détecteur de niveau d'eau" },
 				description: {
-					en: "I'm building a wireless sensor system to monitor the water level in my father’s garden tank. The sensor, made with an STM32, measures the water level and transmits the data via 2.4GHz antennas to another STM32. This second unit is connected to Wi-Fi and sends the data to my server, where it is stored in a database. The information is then accessible through a Next.js web application, allowing real-time monitoring and preventing the tank from overflowing.",
-					fr: "Je développe un système de capteur sans fil pour surveiller le niveau d’eau dans la cuve du jardin de mon père. Le capteur, fait avec un STM32, mesure le niveau d’eau et transmet les données via des antennes 2.4GHz à un autre STM32. Ce second module est connecté en Wi-Fi et envoie les données à mon serveur, où elles sont stockées dans une base de données. Les informations sont ensuite accessibles via une application web développée en Next.js, permettant une surveillance en temps réel et évitant tout risque de débordement de la cuve."
+					en: "I'm building a wireless sensor system to monitor the water level in my father’s garden tank. The sensor, built with an STM32, measures the water level and transmits the data via 2.4GHz antennas to a second STM32 unit. This receiving unit is connected to Wi-Fi, sends the data to my server, and features a built-in screen that displays the current water level, temperature, and upcoming weather forecasts locally.",
+					fr: "Je développe un système de capteur sans fil pour surveiller le niveau d’eau dans la cuve du jardin de mon père. Le capteur, conçu avec un STM32, mesure le niveau d’eau et transmet les données via des antennes 2.4GHz à une seconde unité STM32. Ce module récepteur est connecté en Wi-Fi, envoie les données à mon serveur, et dispose d’un écran intégré affichant localement le niveau d’eau, la température ainsi que les prévisions météo."
 				},
 				link: "",
 				date: "03-2025",
