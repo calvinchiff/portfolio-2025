@@ -10,7 +10,6 @@ type SectionProps = {
 	nbRightGridRows?: 0 | 1 | 2;
 };
 
-const InvisGridStyle = "blur-[1px]";
 const InvisSideTileStyle = "relative h-full w-full mask-gradient ";
 const InvisTileStyle = "blur-[2px] opacity-50";
 const VisTileStyle = "opacity-90";
