@@ -1,5 +1,6 @@
 import React from "react";
 import { useScrollContext } from "@/app/utils/ScrollContext";
+import BGTile from "@/app/components/ui/BGTile";
 
 type SectionProps = {
 	customGridClassName?: string;
@@ -10,10 +11,15 @@ type SectionProps = {
 };
 
 const InvisGridStyle = "blur-[1px]";
-// const InvisTileStyle = "mask-gradient bg-[#2b2b2b2b] opacity-100 \border-white";
-const InvisTileStyle = "transition-all";
+const InvisSideTileStyle = "relative h-full w-full mask-gradient ";
+const InvisTileStyle = "blur-[2px] opacity-50";
+const VisTileStyle = "opacity-90";
 
-const renderInvisGrid = (position: "left" | "right", nbGridRows = 0) => {
+const renderInvisGrid = (
+	position: "left" | "right",
+	nbGridRows = 0,
+	isActive: boolean
+) => {
 	const maskTop = position === "left" ? "mask-top-left" : "mask-top-right";
 	const maskBottom =
 		position === "left" ? "mask-bottom-left" : "mask-bottom-right";
@@ -21,19 +27,23 @@ const renderInvisGrid = (position: "left" | "right", nbGridRows = 0) => {
 	const gridRowsSize = nbGridRows === 1 ? "grid-row-1" : "grid-row-2";
 	return (
 		<div
-			className={`grid ${gridRowsSize} gap-2 h-full min-w-[200px] md:min-w-[300px] ${InvisGridStyle}`}
+			className={`grid ${gridRowsSize} gap-2 h-full min-w-[200px] md:min-w-[300px] transition-all duration-300 ease-in-out ${
+				isActive ? "opacity-90" : "opacity-0"
+			}`}
 		>
 			{nbGridRows >= 1 && (
 				<div
-					className={`h-full w-full rounded-[35px] ${InvisTileStyle} ${
+					className={`${InvisSideTileStyle} ${
 						nbGridRows === 2 ? maskTop : maskSingle
 					}`}
-				/>
+				>
+					<BGTile />
+				</div>
 			)}
 			{nbGridRows === 2 && (
-				<div
-					className={`h-full w-full rounded-[35px] ${InvisTileStyle} ${maskBottom}`}
-				/>
+				<div className={`${InvisSideTileStyle} ${maskBottom}`}>
+					<BGTile />
+				</div>
 			)}
 		</div>
 	);
@@ -52,17 +62,17 @@ export default function Section({
 		<section id={id} className="snap-center">
 			<div className="overflow-hidden flex justify-center items-center w-full md:min-h-[500px] xl:min-h-[525px] h-[65vh] max-h-[600px] gap-2">
 				{/* Left invis grid */}
-				{renderInvisGrid("left", nbLeftGridRows)}
+				{renderInvisGrid("left", nbLeftGridRows, isActive)}
 				<div
 					className={`gap-2 h-full max-w-[90vw] aspect-[3/2] ${customGridClassName} ${
-						isActive ? "opacity-90 " : "blur-[2px] brightness-90 opacity-50"
+						isActive ? VisTileStyle : InvisTileStyle
 					} transition-all duration-300 ease-in-out
 					}`}
 				>
 					{children}
 				</div>
 				{/* Right invis grid */}
-				{renderInvisGrid("right", nbRightGridRows)}
+				{renderInvisGrid("right", nbRightGridRows, isActive)}
 			</div>
 		</section>
 	);
