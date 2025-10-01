@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Exo } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import BGTopo from "@/app/components/ui/BGTopo";
 import { ScrollProvider } from "@/app/utils/ScrollContext";
 import AnimatedWrapper from "@/app/utils/AnimatedWrapper";
@@ -59,8 +57,6 @@ export default function RootLayout({
 					<ScrollProvider>{children}</ScrollProvider>
 				</AnimatedWrapper>
 				<BGTopo />
-				<Analytics />
-				<SpeedInsights />
 				{/* </CRTFilter> */}
 			</body>
 		</html>
