@@ -17,7 +17,8 @@ export const projectsData = {
 				},
 				link: "",
 				date: "03-2025",
-				techno: "Next.js, Tailwind CSS, Vercel, ThreeJS, Figma",
+				techno:
+					"Next.js, React, TypeScript, Tailwind CSS, Framer Motion, Figma, Docker, GitHub Actions, VPS Linux, Nginx",
 				state: { en: "Done", fr: "Terminé" }
 			},
 			{
