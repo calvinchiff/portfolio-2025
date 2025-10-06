@@ -54,7 +54,11 @@ export default function RootLayout({
 		<html lang="en" className="scroll-smooth">
 			<body className={`${exo.variable} antialiased`}>
 				{/* <CRTFilter> */}
-				<PlausibleProvider domain="calvinchiff.com trackOutboundLinks trackFileDownloads">
+				<PlausibleProvider
+					domain="calvinchiff.com"
+					trackOutboundLinks
+					trackFileDownloads
+				>
 					<AnimatedWrapper>
 						<ScrollProvider>{children}</ScrollProvider>
 					</AnimatedWrapper>
