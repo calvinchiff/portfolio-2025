@@ -51,6 +51,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className="scroll-smooth">
+			<head>
+				<script
+					defer
+					data-domain="calvinchiff.com"
+					src="https://stats.calvinchiff.com/js/script.file-downloads.outbound-links.js"
+				></script>
+			</head>
 			<body className={`${exo.variable} antialiased`}>
 				{/* <CRTFilter> */}
 				<AnimatedWrapper>
