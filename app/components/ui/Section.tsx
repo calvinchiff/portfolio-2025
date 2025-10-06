@@ -19,6 +19,7 @@ const renderInvisGrid = (
 	nbGridRows = 0,
 	isActive: boolean
 ) => {
+	if (nbGridRows === 0) return null;
 	const maskTop = position === "left" ? "mask-top-left" : "mask-top-right";
 	const maskBottom =
 		position === "left" ? "mask-bottom-left" : "mask-bottom-right";
