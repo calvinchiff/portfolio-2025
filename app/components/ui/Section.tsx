@@ -12,7 +12,7 @@ type SectionProps = {
 
 const InvisSideTileStyle = "relative h-full w-full mask-gradient ";
 const InvisTileStyle = "blur-[2px] opacity-50";
-const VisTileStyle = "opacity-90";
+const VisTileStyle = "opacity-100";
 
 const renderInvisGrid = (
 	position: "left" | "right",
@@ -28,7 +28,7 @@ const renderInvisGrid = (
 	return (
 		<div
 			className={`grid ${gridRowsSize} gap-2 h-full min-w-[200px] md:min-w-[300px] transition-all duration-300 ease-in-out ${
-				isActive ? "opacity-90" : "opacity-0"
+				isActive ? "opacity-100" : "opacity-0"
 			}`}
 		>
 			{nbGridRows >= 1 && (
