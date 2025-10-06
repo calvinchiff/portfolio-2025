@@ -33,7 +33,7 @@ export const generalData = {
 			},
 			text: {
 				en: "tinkering, 3D modeling embedded systems (STM32), woodworking",
-				fr: "bricoler, modélisation 3D, systèmes embarqués (STM32), travail du bois"
+				fr: "bricolage, modélisation 3D, systèmes embarqués (STM32), travail du bois"
 			}
 		}
 	],
