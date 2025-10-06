@@ -1,13 +1,13 @@
-// app/components/AnalyticsWrapper.tsx
 "use client";
 
-import { PlausibleProvider } from "next-plausible";
+import PlausibleProvider from "next-plausible";
 
 export default function AnalyticsWrapper({
 	children
 }: {
 	children: React.ReactNode;
 }) {
+	console.log("AnalyticsWrapper mounted"); // <- test
 	return (
 		<PlausibleProvider
 			domain="calvinchiff.com"
