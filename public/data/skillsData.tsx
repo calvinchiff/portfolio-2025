@@ -148,7 +148,7 @@ export const skillsData = [
 					},
 					{ name: { en: "Mechanics", fr: "Mécanique" }, icon: "🔧" },
 					{
-						name: { en: "Quantum physics", fr: "Physique quantique" },
+						name: { en: "Physics", fr: "Physique" },
 						icon: "🔬"
 					}
 				]
