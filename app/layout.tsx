@@ -56,6 +56,8 @@ export default function RootLayout({
 				{/* <CRTFilter> */}
 				<PlausibleProvider
 					domain="calvinchiff.com"
+					selfHosted
+					customDomain="https://stats.calvinchiff.com"
 					trackOutboundLinks
 					trackFileDownloads
 				>
