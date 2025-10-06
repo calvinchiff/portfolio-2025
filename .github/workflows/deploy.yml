@@ -21,6 +21,7 @@ jobs:
           cd /var/www/portfolio-2025
           git fetch origin
           git reset --hard origin/main
+          git pull
 
           # Rebuild docker image
           docker build -t portfolio:latest .
