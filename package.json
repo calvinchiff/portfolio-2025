@@ -12,6 +12,7 @@
 	"dependencies": {
 		"framer-motion": "^12.5.0",
 		"next": "^15.5.4",
+		"next-plausible": "^3.12.4",
 		"next-sitemap": "^4.2.3",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",

@@ -4,6 +4,7 @@ import "./globals.css";
 import BGTopo from "@/app/components/ui/BGTopo";
 import { ScrollProvider } from "@/app/utils/ScrollContext";
 import AnimatedWrapper from "@/app/utils/AnimatedWrapper";
+import PlausibleProvider from "next-plausible";
 // import CRTFilter from "@/app/components/ui/CRTFilter";
 
 const exo = Exo({
@@ -51,19 +52,14 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className="scroll-smooth">
-			<head>
-				<script
-					defer
-					data-domain="calvinchiff.com"
-					src="https://stats.calvinchiff.com/js/script.file-downloads.outbound-links.js"
-				></script>
-			</head>
 			<body className={`${exo.variable} antialiased`}>
 				{/* <CRTFilter> */}
-				<AnimatedWrapper>
-					<ScrollProvider>{children}</ScrollProvider>
-				</AnimatedWrapper>
-				<BGTopo />
+				<PlausibleProvider domain="calvinchiff.com trackOutboundLinks trackFileDownloads">
+					<AnimatedWrapper>
+						<ScrollProvider>{children}</ScrollProvider>
+					</AnimatedWrapper>
+					<BGTopo />
+				</PlausibleProvider>
 				{/* </CRTFilter> */}
 			</body>
 		</html>
