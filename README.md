@@ -56,8 +56,6 @@ npm run start
    ```bash
    npm run start
    ```
-3. Recommended: use **pm2** or **systemd** to keep the process running.
-4. Put an Nginx reverse proxy in front to serve on port 80/443 with SSL.
 
 ## Project Structure
 
