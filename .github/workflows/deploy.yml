@@ -14,10 +14,11 @@ jobs:
         uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-passphrase: ${{ secrets.SSH_PASSPHRASE }}
 
       - name: Deploy on VPS
         run: |
-          ssh -o StrictHostKeyChecking=no -p ${{ secrets.VPS_PORT }} deploy@calvinchiff.com << 'EOF'
+          ssh -o StrictHostKeyChecking=no -p ${{ secrets.VPS_PORT }} ${{ secrets.USER_HOST }} << 'EOF'
           cd /var/www/portfolio-2025
           git fetch origin
           git reset --hard origin/main
