@@ -7,7 +7,7 @@ Personal portfolio website built with Next.js, React, and Tailwind CSS. It inclu
 - Responsive design
 - About / Skills section
 - Project showcase
-- Contact form with email and LinkedIn/GitHub links
+- Contact form with email and LinkedIn / GitHub links
 - SEO friendly (with sitemap)
 
 ## Tech Stack
